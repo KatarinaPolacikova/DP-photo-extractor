@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-02-03T06:46:23.279910",
+  "model_source": "runs\\segment\\trained_models\\photo_segmentation_model_yolo8s\\weights\\best.pt",
+  "validation": {
+    "mAP50": 0.9860603554125854,
+    "mAP50-95": 0.9336067133083166,
+    "precision": 0.9969434074815079,
+    "recall": 0.9794344473007712
+  },
+  "test": {
+    "mAP50": 0.994923469387755,
+    "mAP50-95": 0.9385529325741834,
+    "precision": 0.9968219122860839,
+    "recall": 0.9897959183673469
+  }
+}

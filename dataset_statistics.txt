@@ -1,0 +1,12 @@
+==================================================
+ŠTATISTIKY DATASETU
+==================================================
+
+Celkový počet skenov: 1920
+Celkový počet fotografií: 2636
+Priemerný počet fotografií na sken: 1.37
+Priemerný pomer strán: 1.39
+Fotografie orientované na šírku: 2357
+Fotografie orientované na výšku: 233
+Okrajové prípady: 1081 (41.0%)
+Malé fotografie: 4 (0.2%)

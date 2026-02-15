@@ -1,0 +1,22 @@
+# Python cache a virtuálne prostredie
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+venv/
+env/
+
+# Git a IDE súbory
+.git/
+.gitignore
+.idea/
+.vscode/
+
+# Build / dist priečinky
+build/
+dist/
+*.egg-info
+
+# OS súbory
+.DS_Store
