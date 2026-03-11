@@ -139,6 +139,41 @@ class ModelTester:
 
         return matches
 
+    def _evaluate_single_image(self, img_path, test_labels_dir, conf_threshold):
+        """Pomocná funkcia na vyhodnotenie jedného obrázka bez vizualizácie"""
+        img = cv2.imread(img_path)
+        if img is None:
+            return None
+
+        h, w = img.shape[:2]
+        results = self.model.predict(source=img_path, conf=conf_threshold, verbose=False)[0]
+
+        # Load Ground Truth
+        label_path = Path(test_labels_dir) / f"{Path(img_path).stem}.txt"
+        gt_masks = self.load_ground_truth(str(label_path), w, h)
+
+        # Process Predictions
+        pred_masks = []
+        if results.masks is not None:
+            for mask in results.masks.data.cpu().numpy():
+                clean_mask = self.process_mask(mask, w, h)
+                pred_masks.append(clean_mask)
+
+        # Match and calculate metrics
+        matches = self.match_predictions_to_gt(pred_masks, gt_masks)
+
+        avg_iou = np.mean([m[2] for m in matches]) if matches else 0.0
+        avg_dice = np.mean([m[3] for m in matches]) if matches else 0.0
+
+        return {
+            'image': Path(img_path).name,
+            'num_gt': len(gt_masks),
+            'num_pred': len(pred_masks),
+            'num_matched': len(matches),
+            'avg_iou': avg_iou,
+            'avg_dice': avg_dice
+        }
+
     def test_all_images(self,
                        test_images_dir='photo_dataset/images/test',
                        test_labels_dir='photo_dataset/labels/test',
@@ -427,12 +462,12 @@ class ModelTester:
 
 
 def main():
-    MODEL_PATH = 'runs/segment/trained_models/photo_segmentation_model_yolo11s/weights/best.pt'
+    MODEL_PATH = 'runs/segment/trained_models/photo_segmentation_model_yolo8s/weights/best.pt'
     TEST_IMAGES_DIR = 'photo_dataset/images/test'
     TEST_LABELS_DIR = 'photo_dataset/labels/test'
     CONF_THRESHOLD = 0.25
     SAVE_DIR = 'test_results'
-    MODE = 'random'
+    MODE = 'all'
 
     print(f"\nKONFIGURÁCIA:")
     print(f"   Model:       {MODEL_PATH}")
