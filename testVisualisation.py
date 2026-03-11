@@ -69,10 +69,10 @@ def plot_comprehensive_comparison(v8_path, v11_path, save_dir='test_results'):
         ax.grid(False)
 
     plt.tight_layout()
-    plt.savefig(os.path.join(save_dir, 'konfuzne_matice.png'), dpi=200, bbox_inches='tight')
+    plt.savefig(os.path.join(save_dir, 'confusion_matrixes.png'), dpi=200, bbox_inches='tight')
     plt.close()
 
-    print(f"Graf matíc uložený do: {save_dir}/konfuzne_matice.png")
+    print(f"Graf matíc uložený do: {save_dir}/confusion_matrixes.png")
 
 
 # Spustenie
