@@ -1,0 +1,11 @@
+{
+  "image": "img_0000924.jpg",
+  "num_gt": 1,
+  "num_pred": 1,
+  "num_matched": 1,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1_score": 1.0,
+  "avg_iou": 0.9397769881133928,
+  "avg_dice": 0.9689536414465977
+}
