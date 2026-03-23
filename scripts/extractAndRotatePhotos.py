@@ -3,9 +3,10 @@ import cv2
 import numpy as np
 from ultralytics import YOLO
 
-MODEL_PATH = "runs/segment/trained_models/photo_segmentation_model_yolo11s/weights/best.pt"
-OBJECT_MODEL_PATH = "yolov8n.pt"
-OUTPUT_DIR = "extracted_photos"
+MODEL_PATH = "../runs/segment/trained_models/photo_segmentation_model_yolo11s/weights/best.pt"
+# MODEL_PATH = "unet_model.pt"
+OBJECT_MODEL_PATH = "../yoloModels/yolov8n.pt"
+OUTPUT_DIR = "../extracted_photos"
 CONF_THRESHOLD = 0.25
 
 CLASS_PERSON = [0]
@@ -255,4 +256,4 @@ def crop_photos(input_image_path):
 
 
 if __name__ == "__main__":
-    crop_photos("photo_dataset/images/test/img_0000172.jpg")
+    crop_photos("../photo_dataset/images/test/img_0000172.jpg")

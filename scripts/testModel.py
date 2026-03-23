@@ -260,7 +260,7 @@ class ModelTester:
             'per_image_results': all_metrics
         }
 
-        summary_file = os.path.join(save_dir, 'overall_metrics.json')
+        summary_file = os.path.join(save_dir, 'overall_metrics_unet.json')
         with open(summary_file, 'w', encoding='utf-8') as f:
             json.dump(summary, f, indent=2, ensure_ascii=False)
 
@@ -462,11 +462,11 @@ class ModelTester:
 
 
 def main():
-    MODEL_PATH = 'runs/segment/trained_models/photo_segmentation_model_yolo8s/weights/best.pt'
-    TEST_IMAGES_DIR = 'photo_dataset/images/test'
-    TEST_LABELS_DIR = 'photo_dataset/labels/test'
+    MODEL_PATH = '../runs/segment/trained_models/photo_segmentation_model_yolo8s/weights/best.pt'
+    TEST_IMAGES_DIR = '../photo_dataset/images/test'
+    TEST_LABELS_DIR = '../photo_dataset/labels/test'
     CONF_THRESHOLD = 0.25
-    SAVE_DIR = 'test_results'
+    SAVE_DIR = '../test_results'
     MODE = 'all'
 
     print(f"\nKONFIGURÁCIA:")

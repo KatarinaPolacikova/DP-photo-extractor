@@ -77,7 +77,7 @@ class PhotoSegmentationTrainer:
         print("MODEL EVALUATION")
         print("=" * 60)
 
-        base_path = os.path.join('runs', 'segment', self.project_name, self.run_name)
+        base_path = os.path.join('../runs', 'segment', self.project_name, self.run_name)
         weights_path = os.path.join(base_path, 'weights', 'best.pt')
 
         if not os.path.exists(weights_path):

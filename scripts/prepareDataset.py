@@ -12,9 +12,9 @@ matplotlib.use('Agg')
 
 
 # --- NASTAVENIA ---
-XML_PATH = 'all_annotated_photos/annotations.xml'
-IMAGES_SRC = 'all_annotated_photos'
-OUTPUT_DIR = 'photo_dataset'
+XML_PATH = '../all_annotated_photos/annotations.xml'
+IMAGES_SRC = '../all_annotated_photos'
+OUTPUT_DIR = '../photo_dataset'
 
 # Rozdelenie dát: 70% tréning, 15% validácia, 15% test
 TRAIN_RATIO = 0.70
@@ -276,7 +276,7 @@ names:
     print(f"YAML súbor pripravený v '{OUTPUT_DIR}/dataset.yaml'")
 
     # Export štatistík do textového súboru
-    with open('dataset_statistics.txt', 'w', encoding='utf-8') as f:
+    with open('../graphsAndStatistics/dataset_statistics.txt', 'w', encoding='utf-8') as f:
         f.write("=" * 50 + "\n")
         f.write("ŠTATISTIKY DATASETU\n")
         f.write("=" * 50 + "\n\n")
