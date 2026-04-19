@@ -1,0 +1,4621 @@
+{
+  "total_images": 576,
+  "total_gt_photos": 784,
+  "total_pred_photos": 838,
+  "total_matched": 782,
+  "overall_precision": 0.9331742243436754,
+  "overall_recall": 0.9974489795918368,
+  "overall_f1": 0.9642416769420468,
+  "average_iou": 0.9870314124318617,
+  "average_dice": 0.993001158812097,
+  "per_image_results": [
+    {
+      "image": "img_0000001.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.989715165189395,
+      "avg_dice": 0.9948306048417578
+    },
+    {
+      "image": "img_0000007.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.7453083266194929,
+      "avg_dice": 0.8540706707829543
+    },
+    {
+      "image": "img_0000014.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.6842397114825169,
+      "avg_dice": 0.8125205774660534
+    },
+    {
+      "image": "img_0000015.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.995928333857695,
+      "avg_dice": 0.9979600138575941
+    },
+    {
+      "image": "img_0000024.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9961685319100503,
+      "avg_dice": 0.9980805888737844
+    },
+    {
+      "image": "img_0000040.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9992899421440605,
+      "avg_dice": 0.9996448449817249
+    },
+    {
+      "image": "img_0000044.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.7200309564704798,
+      "avg_dice": 0.8372302297953873
+    },
+    {
+      "image": "img_0000052.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991152074728504,
+      "avg_dice": 0.9995574079353495
+    },
+    {
+      "image": "img_0000055.jpg",
+      "num_gt": 1,
+      "num_pred": 2,
+      "num_matched": 1,
+      "avg_iou": 0.8574211507736156,
+      "avg_dice": 0.9232382762697623
+    },
+    {
+      "image": "img_0000062.jpg",
+      "num_gt": 2,
+      "num_pred": 2,
+      "num_matched": 2,
+      "avg_iou": 0.993179510069918,
+      "avg_dice": 0.9965770570144321
+    },
+    {
+      "image": "img_0000065.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000066.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.705415697876515,
+      "avg_dice": 0.827265397820435
+    },
+    {
+      "image": "img_0000091.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000096.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000099.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9989426390565763,
+      "avg_dice": 0.999471039877401
+    },
+    {
+      "image": "img_0000123.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9928987588445084,
+      "avg_dice": 0.9964367275939251
+    },
+    {
+      "image": "img_0000127.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9716178730102435,
+      "avg_dice": 0.9856046511962163
+    },
+    {
+      "image": "img_0000129.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9931239981800013,
+      "avg_dice": 0.9965501384628968
+    },
+    {
+      "image": "img_0000139.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9878277521937435,
+      "avg_dice": 0.9938766083767453
+    },
+    {
+      "image": "img_0000140.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.994788457038581,
+      "avg_dice": 0.9973874207347501
+    },
+    {
+      "image": "img_0000144.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9895043357356689,
+      "avg_dice": 0.9947244828393651
+    },
+    {
+      "image": "img_0000147.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9933333333333333,
+      "avg_dice": 0.9966555183946488
+    },
+    {
+      "image": "img_0000150.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9854172958693896,
+      "avg_dice": 0.9926550936365119
+    },
+    {
+      "image": "img_0000151.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9961708897219785,
+      "avg_dice": 0.9980817723083043
+    },
+    {
+      "image": "img_0000154.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991645447148219,
+      "avg_dice": 0.9995820977881051
+    },
+    {
+      "image": "img_0000155.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9806402342330346,
+      "avg_dice": 0.9902255011120371
+    },
+    {
+      "image": "img_0000170.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9891885476864367,
+      "avg_dice": 0.994560006954669
+    },
+    {
+      "image": "img_0000172.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9903787534473707,
+      "avg_dice": 0.9951648154000419
+    },
+    {
+      "image": "img_0000184.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9939648245465602,
+      "avg_dice": 0.9969732788767665
+    },
+    {
+      "image": "img_0000187.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9869254295270948,
+      "avg_dice": 0.993417512717921
+    },
+    {
+      "image": "img_0000201.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9979166565957688,
+      "avg_dice": 0.9989572420864737
+    },
+    {
+      "image": "img_0000205.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9978877840178744,
+      "avg_dice": 0.9989427754656581
+    },
+    {
+      "image": "img_0000208.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9792476330531847,
+      "avg_dice": 0.9894862606648926
+    },
+    {
+      "image": "img_0000215.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9871838314765743,
+      "avg_dice": 0.9935493601466792
+    },
+    {
+      "image": "img_0000223.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9847272530385951,
+      "avg_dice": 0.9922952758323
+    },
+    {
+      "image": "img_0000226.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9594910599729132,
+      "avg_dice": 0.978865689796027
+    },
+    {
+      "image": "img_0000234.jpg",
+      "num_gt": 5,
+      "num_pred": 6,
+      "num_matched": 5,
+      "avg_iou": 0.9595046550872304,
+      "avg_dice": 0.9791328038104214
+    },
+    {
+      "image": "img_0000241.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.994461191294313,
+      "avg_dice": 0.9972229047474759
+    },
+    {
+      "image": "img_0000246.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9999563583545434,
+      "avg_dice": 0.999978178701113
+    },
+    {
+      "image": "img_0000247.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9965990090315884,
+      "avg_dice": 0.9982966079052292
+    },
+    {
+      "image": "img_0000252.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9950194809874889,
+      "avg_dice": 0.9975035236197063
+    },
+    {
+      "image": "img_0000266.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000275.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9943387466710398,
+      "avg_dice": 0.9971613381435777
+    },
+    {
+      "image": "img_0000277.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9932151796140116,
+      "avg_dice": 0.9965960421858205
+    },
+    {
+      "image": "img_0000283.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9998890577854583,
+      "avg_dice": 0.9999445258155147
+    },
+    {
+      "image": "img_0000311.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9916858909984465,
+      "avg_dice": 0.9958255922587343
+    },
+    {
+      "image": "img_0000313.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 0,
+      "avg_iou": 0.0,
+      "avg_dice": 0.0
+    },
+    {
+      "image": "img_0000320.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.8512382795806017,
+      "avg_dice": 0.9196420460508734
+    },
+    {
+      "image": "img_0000344.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9775519808616777,
+      "avg_dice": 0.9886485820066581
+    },
+    {
+      "image": "img_0000349.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9944329077011443,
+      "avg_dice": 0.99720868409393
+    },
+    {
+      "image": "img_0000357.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9871125137523844,
+      "avg_dice": 0.993514465759526
+    },
+    {
+      "image": "img_0000360.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9895475864395473,
+      "avg_dice": 0.9947463364879057
+    },
+    {
+      "image": "img_0000361.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9917756932766778,
+      "avg_dice": 0.9958708670102343
+    },
+    {
+      "image": "img_0000365.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9959880448653056,
+      "avg_dice": 0.997989990398482
+    },
+    {
+      "image": "img_0000369.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000370.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9980518922459993,
+      "avg_dice": 0.9990249964169795
+    },
+    {
+      "image": "img_0000374.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9830557011882156,
+      "avg_dice": 0.9914554599744063
+    },
+    {
+      "image": "img_0000391.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9632719982522985,
+      "avg_dice": 0.9812924537301012
+    },
+    {
+      "image": "img_0000409.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.994789478107404,
+      "avg_dice": 0.9973879339400067
+    },
+    {
+      "image": "img_0000453.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9951832305062068,
+      "avg_dice": 0.9975858009328942
+    },
+    {
+      "image": "img_0000468.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9826570305135881,
+      "avg_dice": 0.9912526628562079
+    },
+    {
+      "image": "img_0000472.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9931716870644084,
+      "avg_dice": 0.9965741471344857
+    },
+    {
+      "image": "img_0000490.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9920564830080718,
+      "avg_dice": 0.9960124037346907
+    },
+    {
+      "image": "img_0000493.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.994776746856173,
+      "avg_dice": 0.9973815349752502
+    },
+    {
+      "image": "img_0000494.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9873114053040644,
+      "avg_dice": 0.9936151955541189
+    },
+    {
+      "image": "img_0000496.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9947593586893153,
+      "avg_dice": 0.9973727952257219
+    },
+    {
+      "image": "img_0000503.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9855264229804209,
+      "avg_dice": 0.9927104586209167
+    },
+    {
+      "image": "img_0000510.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9940831722875907,
+      "avg_dice": 0.9970328079617553
+    },
+    {
+      "image": "img_0000512.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.977623975521865,
+      "avg_dice": 0.988685399876268
+    },
+    {
+      "image": "img_0000514.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9952355895611122,
+      "avg_dice": 0.9976121063277867
+    },
+    {
+      "image": "img_0000520.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9199546808645497,
+      "avg_dice": 0.9583087455484073
+    },
+    {
+      "image": "img_0000523.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9896412935533312,
+      "avg_dice": 0.994793681413714
+    },
+    {
+      "image": "img_0000529.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9928973949798907,
+      "avg_dice": 0.9964360407926667
+    },
+    {
+      "image": "img_0000531.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.996366381369237,
+      "avg_dice": 0.9981798838806979
+    },
+    {
+      "image": "img_0000532.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9872911888335621,
+      "avg_dice": 0.9936049577244404
+    },
+    {
+      "image": "img_0000534.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9928275167445808,
+      "avg_dice": 0.9964008509541579
+    },
+    {
+      "image": "img_0000540.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9957252138081099,
+      "avg_dice": 0.9978580286693209
+    },
+    {
+      "image": "img_0000551.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9955281229254859,
+      "avg_dice": 0.9977590508381519
+    },
+    {
+      "image": "img_0000554.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9898196449532061,
+      "avg_dice": 0.994883780008598
+    },
+    {
+      "image": "img_0000557.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9961469166671478,
+      "avg_dice": 0.9980697396064988
+    },
+    {
+      "image": "img_0000565.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9834448178390652,
+      "avg_dice": 0.9916533185032234
+    },
+    {
+      "image": "img_0000569.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9862082096169124,
+      "avg_dice": 0.9930562212378793
+    },
+    {
+      "image": "img_0000571.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9923095130212356,
+      "avg_dice": 0.9961399135382825
+    },
+    {
+      "image": "img_0000578.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9959126917552596,
+      "avg_dice": 0.9979521608026122
+    },
+    {
+      "image": "img_0000606.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9815272451792937,
+      "avg_dice": 0.9906775166146985
+    },
+    {
+      "image": "img_0000607.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9961450409629486,
+      "avg_dice": 0.9980687981294226
+    },
+    {
+      "image": "img_0000609.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.8377737597610465,
+      "avg_dice": 0.9117267621341777
+    },
+    {
+      "image": "img_0000611.jpg",
+      "num_gt": 1,
+      "num_pred": 7,
+      "num_matched": 1,
+      "avg_iou": 0.969523366308852,
+      "avg_dice": 0.984525883666836
+    },
+    {
+      "image": "img_0000616.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9950483722711744,
+      "avg_dice": 0.9975180412677469
+    },
+    {
+      "image": "img_0000618.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9936959087261648,
+      "avg_dice": 0.996837987555553
+    },
+    {
+      "image": "img_0000622.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9550934024689072,
+      "avg_dice": 0.9770309707585405
+    },
+    {
+      "image": "img_0000635.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9903231703825512,
+      "avg_dice": 0.9951380611141714
+    },
+    {
+      "image": "img_0000641.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9947122265311658,
+      "avg_dice": 0.9973491045983962
+    },
+    {
+      "image": "img_0000664.jpg",
+      "num_gt": 1,
+      "num_pred": 2,
+      "num_matched": 1,
+      "avg_iou": 0.9577689587143028,
+      "avg_dice": 0.9784289963850326
+    },
+    {
+      "image": "img_0000672.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991657084955146,
+      "avg_dice": 0.9995826801645606
+    },
+    {
+      "image": "img_0000673.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000683.jpg",
+      "num_gt": 1,
+      "num_pred": 2,
+      "num_matched": 1,
+      "avg_iou": 0.9828441839689593,
+      "avg_dice": 0.9913478748508111
+    },
+    {
+      "image": "img_0000702.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.978127875738592,
+      "avg_dice": 0.9889430180274663
+    },
+    {
+      "image": "img_0000713.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9811232174960057,
+      "avg_dice": 0.9904716767047669
+    },
+    {
+      "image": "img_0000719.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9800752952599492,
+      "avg_dice": 0.9899374004676751
+    },
+    {
+      "image": "img_0000721.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9955679607881393,
+      "avg_dice": 0.9977790587447043
+    },
+    {
+      "image": "img_0000744.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9940803562986572,
+      "avg_dice": 0.9970313915973122
+    },
+    {
+      "image": "img_0000745.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9876893989433714,
+      "avg_dice": 0.9938065770923904
+    },
+    {
+      "image": "img_0000759.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9709957057470444,
+      "avg_dice": 0.9852844457406048
+    },
+    {
+      "image": "img_0000774.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9815476253696254,
+      "avg_dice": 0.9906878974826898
+    },
+    {
+      "image": "img_0000779.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000786.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000794.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000829.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000842.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991595102921987,
+      "avg_dice": 0.9995795784661132
+    },
+    {
+      "image": "img_0000851.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9890044793422823,
+      "avg_dice": 0.9944706197236823
+    },
+    {
+      "image": "img_0000853.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9897308473669574,
+      "avg_dice": 0.9948389237435646
+    },
+    {
+      "image": "img_0000855.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9885268646812901,
+      "avg_dice": 0.9942277653644147
+    },
+    {
+      "image": "img_0000859.jpg",
+      "num_gt": 3,
+      "num_pred": 3,
+      "num_matched": 3,
+      "avg_iou": 0.9897051475337465,
+      "avg_dice": 0.9948258323308484
+    },
+    {
+      "image": "img_0000870.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9913842371290543,
+      "avg_dice": 0.9956734804311965
+    },
+    {
+      "image": "img_0000876.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9906368266532587,
+      "avg_dice": 0.9952946214212689
+    },
+    {
+      "image": "img_0000877.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9887672368142765,
+      "avg_dice": 0.9943487138163419
+    },
+    {
+      "image": "img_0000888.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9908814218849152,
+      "avg_dice": 0.9954198286171902
+    },
+    {
+      "image": "img_0000890.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9831178421579285,
+      "avg_dice": 0.9914870627033938
+    },
+    {
+      "image": "img_0000891.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9946054022452966,
+      "avg_dice": 0.9972954060243541
+    },
+    {
+      "image": "img_0000894.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9955900084877584,
+      "avg_dice": 0.9977901314932001
+    },
+    {
+      "image": "img_0000901.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000924.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991722040027187,
+      "avg_dice": 0.9995859306188711
+    },
+    {
+      "image": "img_0000931.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991636323027776,
+      "avg_dice": 0.999581641200496
+    },
+    {
+      "image": "img_0000935.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991635053441398,
+      "avg_dice": 0.9995815776680476
+    },
+    {
+      "image": "img_0000973.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000978.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000979.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000980.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000991.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001004.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001013.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001042.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001047.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991659432672994,
+      "avg_dice": 0.9995827976484346
+    },
+    {
+      "image": "img_0001055.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001057.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991599137267775,
+      "avg_dice": 0.9995797803530101
+    },
+    {
+      "image": "img_0001067.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001068.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001074.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001089.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001105.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9998583101355817,
+      "avg_dice": 0.9999291500484309
+    },
+    {
+      "image": "img_0001128.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001133.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001144.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001156.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001159.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001168.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001173.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001177.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001189.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991618859235721,
+      "avg_dice": 0.9995807672793638
+    },
+    {
+      "image": "img_0001196.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9950074503972177,
+      "avg_dice": 0.9974974782165409
+    },
+    {
+      "image": "img_0001225.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9978903036255669,
+      "avg_dice": 0.9989440379331114
+    },
+    {
+      "image": "img_0001228.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.999920057749735,
+      "avg_dice": 0.9999600272771128
+    },
+    {
+      "image": "img_0001232.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001237.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9772519546856133,
+      "avg_dice": 0.9884951205836568
+    },
+    {
+      "image": "img_0001240.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001245.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001246.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9987271339679483,
+      "avg_dice": 0.9993631616790408
+    },
+    {
+      "image": "img_0001253.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001255.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001272.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.990024987350677,
+      "avg_dice": 0.994987493768808
+    },
+    {
+      "image": "img_0001290.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9999930126331592,
+      "avg_dice": 0.9999965063043738
+    },
+    {
+      "image": "img_0001298.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9875020687461937,
+      "avg_dice": 0.9937117392478034
+    },
+    {
+      "image": "img_0001301.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001302.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001312.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001325.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001337.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9994655179250602,
+      "avg_dice": 0.9997326875256671
+    },
+    {
+      "image": "img_0001358.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001373.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9927405397907818,
+      "avg_dice": 0.9963570469590686
+    },
+    {
+      "image": "img_0001375.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001383.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9994154953719575,
+      "avg_dice": 0.9997076622495947
+    },
+    {
+      "image": "img_0001384.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001385.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.99659055376681,
+      "avg_dice": 0.9982923658399778
+    },
+    {
+      "image": "img_0001388.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991757735847562,
+      "avg_dice": 0.9995877168850612
+    },
+    {
+      "image": "img_0001408.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001410.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9999473196326385,
+      "avg_dice": 0.9999736591224957
+    },
+    {
+      "image": "img_0001420.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9999970731503356,
+      "avg_dice": 0.9999985365730262
+    },
+    {
+      "image": "img_0001431.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001436.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001447.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991622033999631,
+      "avg_dice": 0.9995809261506584
+    },
+    {
+      "image": "img_0001453.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991678687272653,
+      "avg_dice": 0.9995837611809635
+    },
+    {
+      "image": "img_0001472.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001486.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991606987753012,
+      "avg_dice": 0.9995801732070798
+    },
+    {
+      "image": "img_0001491.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.989791244590932,
+      "avg_dice": 0.9948694339485011
+    },
+    {
+      "image": "img_0001493.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001498.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991432419817836,
+      "avg_dice": 0.9995714374036715
+    },
+    {
+      "image": "img_0001506.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001507.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991556472451159,
+      "avg_dice": 0.9995776453143868
+    },
+    {
+      "image": "img_0001518.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.99165566710429,
+      "avg_dice": 0.9958103536502161
+    },
+    {
+      "image": "img_0001519.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991658259216352,
+      "avg_dice": 0.999582738926632
+    },
+    {
+      "image": "img_0001520.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9959352351403605,
+      "avg_dice": 0.9979634785798279
+    },
+    {
+      "image": "img_0001524.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991675164481418,
+      "avg_dice": 0.999583584894708
+    },
+    {
+      "image": "img_0001532.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001554.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001560.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001574.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.999162218015516,
+      "avg_dice": 0.9995809334645611
+    },
+    {
+      "image": "img_0001583.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991538729967543,
+      "avg_dice": 0.9995767574398976
+    },
+    {
+      "image": "img_0001586.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9998755329806994,
+      "avg_dice": 0.999937762617099
+    },
+    {
+      "image": "img_0001606.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991655879174709,
+      "avg_dice": 0.999582619825205
+    },
+    {
+      "image": "img_0001609.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001620.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001629.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.999157491964906,
+      "avg_dice": 0.9995785684527206
+    },
+    {
+      "image": "img_0001633.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001636.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001639.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9253694687925659,
+      "avg_dice": 0.9612383324774354
+    },
+    {
+      "image": "img_0001646.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001649.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001666.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.997010989237398,
+      "avg_dice": 0.998503257729321
+    },
+    {
+      "image": "img_0001674.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001675.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001680.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9944288659568077,
+      "avg_dice": 0.9972066519201127
+    },
+    {
+      "image": "img_0001687.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001699.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9734634939359011,
+      "avg_dice": 0.9865533331902816
+    },
+    {
+      "image": "img_0001705.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001709.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991678687272653,
+      "avg_dice": 0.9995837611809635
+    },
+    {
+      "image": "img_0001712.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001715.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001717.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991670251522443,
+      "avg_dice": 0.9995833390420732
+    },
+    {
+      "image": "img_0001734.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001735.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001739.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991593176649443,
+      "avg_dice": 0.9995794820714751
+    },
+    {
+      "image": "img_0001749.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9894100873135815,
+      "avg_dice": 0.9946752858560471
+    },
+    {
+      "image": "img_0001757.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9860293326941134,
+      "avg_dice": 0.9929640625724013
+    },
+    {
+      "image": "img_0001759.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9580986144446679,
+      "avg_dice": 0.9777653719063966
+    },
+    {
+      "image": "img_0001766.jpg",
+      "num_gt": 2,
+      "num_pred": 2,
+      "num_matched": 2,
+      "avg_iou": 0.9907054416662846,
+      "avg_dice": 0.9953309767107615
+    },
+    {
+      "image": "img_0001770.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9926441832455486,
+      "avg_dice": 0.9963080362331398
+    },
+    {
+      "image": "img_0001778.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9869206677407827,
+      "avg_dice": 0.9934119784528864
+    },
+    {
+      "image": "img_0001787.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9859314441669977,
+      "avg_dice": 0.9929124683222809
+    },
+    {
+      "image": "img_0001788.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9898976468548428,
+      "avg_dice": 0.9949219655609691
+    },
+    {
+      "image": "img_0001795.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9878238716318626,
+      "avg_dice": 0.9938727873281572
+    },
+    {
+      "image": "img_0001798.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9899842682167432,
+      "avg_dice": 0.994966794453165
+    },
+    {
+      "image": "img_0001801.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9890858311171241,
+      "avg_dice": 0.9945112018261674
+    },
+    {
+      "image": "img_0001802.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9892537803368374,
+      "avg_dice": 0.994597425036621
+    },
+    {
+      "image": "img_0001804.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9909162058345611,
+      "avg_dice": 0.9954369404729637
+    },
+    {
+      "image": "img_0001809.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9475260830249143,
+      "avg_dice": 0.9719046354942756
+    },
+    {
+      "image": "img_0001814.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9921596192992036,
+      "avg_dice": 0.9960640803021519
+    },
+    {
+      "image": "img_0001815.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9930676963014508,
+      "avg_dice": 0.9965217921541684
+    },
+    {
+      "image": "img_0001825.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.991102062517785,
+      "avg_dice": 0.995531149482632
+    },
+    {
+      "image": "img_0001831.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9999380155823436,
+      "avg_dice": 0.9999690068306251
+    },
+    {
+      "image": "img_0001836.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001864.jpg",
+      "num_gt": 2,
+      "num_pred": 3,
+      "num_matched": 2,
+      "avg_iou": 0.9904779772321761,
+      "avg_dice": 0.9952160321703196
+    },
+    {
+      "image": "img_0001885.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001891.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001893.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001895.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001900.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001914.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991610378781026,
+      "avg_dice": 0.9995803429008461
+    },
+    {
+      "image": "img_0001926.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9798586759602186,
+      "avg_dice": 0.9898043116031509
+    },
+    {
+      "image": "img_0001943.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001952.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991527626495559,
+      "avg_dice": 0.9995762017959442
+    },
+    {
+      "image": "img_0001958.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9900355175460529,
+      "avg_dice": 0.9949928117533127
+    },
+    {
+      "image": "img_0001966.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9903912548509461,
+      "avg_dice": 0.9951715728472917
+    },
+    {
+      "image": "img_0001976.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9958497736687306,
+      "avg_dice": 0.9979205717855004
+    },
+    {
+      "image": "img_0001985.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9951320443846086,
+      "avg_dice": 0.9975600834896655
+    },
+    {
+      "image": "img_0002000.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9962043327785525,
+      "avg_dice": 0.9980985577683
+    },
+    {
+      "image": "img_0002001.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9965000377656291,
+      "avg_dice": 0.9982469510803076
+    },
+    {
+      "image": "img_0002004.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9964791377240712,
+      "avg_dice": 0.9982364642788392
+    },
+    {
+      "image": "img_0002014.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9962663594441565,
+      "avg_dice": 0.998129688186058
+    },
+    {
+      "image": "img_0002024.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9915771230626614,
+      "avg_dice": 0.9957707503064778
+    },
+    {
+      "image": "img_0002025.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.989024331190064,
+      "avg_dice": 0.9944818830831652
+    },
+    {
+      "image": "img_0002030.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9938691420208727,
+      "avg_dice": 0.9969251452615825
+    },
+    {
+      "image": "img_0002035.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9921294979959698,
+      "avg_dice": 0.9960492016146804
+    },
+    {
+      "image": "img_0002052.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9951820681348976,
+      "avg_dice": 0.9975852169373163
+    },
+    {
+      "image": "img_0002065.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0002066.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0002071.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.992433975192205,
+      "avg_dice": 0.9962026220682846
+    },
+    {
+      "image": "img_0002079.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9966905329467154,
+      "avg_dice": 0.9983425237919066
+    },
+    {
+      "image": "img_0002098.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9965462195770863,
+      "avg_dice": 0.9982701224799868
+    },
+    {
+      "image": "img_0002105.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9948639253501614,
+      "avg_dice": 0.9974253508800421
+    },
+    {
+      "image": "img_0002110.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9947133593199475,
+      "avg_dice": 0.9973496739993486
+    },
+    {
+      "image": "img_0002112.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.995300205410167,
+      "avg_dice": 0.9976445676810488
+    },
+    {
+      "image": "img_0002119.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9958090321620097,
+      "avg_dice": 0.9979001158074476
+    },
+    {
+      "image": "img_0002126.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9947887242792041,
+      "avg_dice": 0.9973875550541429
+    },
+    {
+      "image": "img_0002127.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9933917734563517,
+      "avg_dice": 0.996684933372535
+    },
+    {
+      "image": "img_0002136.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0002139.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9998275821619409,
+      "avg_dice": 0.999913783648352
+    },
+    {
+      "image": "img_0002143.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0002145.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0002146.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991221535175941,
+      "avg_dice": 0.9995608840205882
+    },
+    {
+      "image": "img_0002150.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0002155.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.999976333949398,
+      "avg_dice": 0.9999881668346768
+    },
+    {
+      "image": "img_0002156.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0002159.jpg",
+      "num_gt": 1,
+      "num_pred": 14,
+      "num_matched": 1,
+      "avg_iou": 0.7434022008639861,
+      "avg_dice": 0.8528177840954597
+    },
+    {
+      "image": "img_0002164.jpg",
+      "num_gt": 3,
+      "num_pred": 6,
+      "num_matched": 3,
+      "avg_iou": 0.9881471838135681,
+      "avg_dice": 0.9940350896832446
+    },
+    {
+      "image": "img_0002166.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9899589812957914,
+      "avg_dice": 0.994949906433967
+    },
+    {
+      "image": "img_0002168.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9858183221209655,
+      "avg_dice": 0.9928573617717454
+    },
+    {
+      "image": "img_0002172.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9871200580098725,
+      "avg_dice": 0.993515107030595
+    },
+    {
+      "image": "img_0000001.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.989715165189395,
+      "avg_dice": 0.9948306048417578
+    },
+    {
+      "image": "img_0000007.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.7453083266194929,
+      "avg_dice": 0.8540706707829543
+    },
+    {
+      "image": "img_0000014.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.6842397114825169,
+      "avg_dice": 0.8125205774660534
+    },
+    {
+      "image": "img_0000015.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.995928333857695,
+      "avg_dice": 0.9979600138575941
+    },
+    {
+      "image": "img_0000024.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9961685319100503,
+      "avg_dice": 0.9980805888737844
+    },
+    {
+      "image": "img_0000040.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9992899421440605,
+      "avg_dice": 0.9996448449817249
+    },
+    {
+      "image": "img_0000044.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.7200309564704798,
+      "avg_dice": 0.8372302297953873
+    },
+    {
+      "image": "img_0000052.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991152074728504,
+      "avg_dice": 0.9995574079353495
+    },
+    {
+      "image": "img_0000055.jpg",
+      "num_gt": 1,
+      "num_pred": 2,
+      "num_matched": 1,
+      "avg_iou": 0.8574211507736156,
+      "avg_dice": 0.9232382762697623
+    },
+    {
+      "image": "img_0000062.jpg",
+      "num_gt": 2,
+      "num_pred": 2,
+      "num_matched": 2,
+      "avg_iou": 0.993179510069918,
+      "avg_dice": 0.9965770570144321
+    },
+    {
+      "image": "img_0000065.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000066.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.705415697876515,
+      "avg_dice": 0.827265397820435
+    },
+    {
+      "image": "img_0000091.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000096.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000099.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9989426390565763,
+      "avg_dice": 0.999471039877401
+    },
+    {
+      "image": "img_0000123.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9928987588445084,
+      "avg_dice": 0.9964367275939251
+    },
+    {
+      "image": "img_0000127.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9716178730102435,
+      "avg_dice": 0.9856046511962163
+    },
+    {
+      "image": "img_0000129.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9931239981800013,
+      "avg_dice": 0.9965501384628968
+    },
+    {
+      "image": "img_0000139.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9878277521937435,
+      "avg_dice": 0.9938766083767453
+    },
+    {
+      "image": "img_0000140.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.994788457038581,
+      "avg_dice": 0.9973874207347501
+    },
+    {
+      "image": "img_0000144.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9895043357356689,
+      "avg_dice": 0.9947244828393651
+    },
+    {
+      "image": "img_0000147.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9933333333333333,
+      "avg_dice": 0.9966555183946488
+    },
+    {
+      "image": "img_0000150.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9854172958693896,
+      "avg_dice": 0.9926550936365119
+    },
+    {
+      "image": "img_0000151.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9961708897219785,
+      "avg_dice": 0.9980817723083043
+    },
+    {
+      "image": "img_0000154.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991645447148219,
+      "avg_dice": 0.9995820977881051
+    },
+    {
+      "image": "img_0000155.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9806402342330346,
+      "avg_dice": 0.9902255011120371
+    },
+    {
+      "image": "img_0000170.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9891885476864367,
+      "avg_dice": 0.994560006954669
+    },
+    {
+      "image": "img_0000172.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9903787534473707,
+      "avg_dice": 0.9951648154000419
+    },
+    {
+      "image": "img_0000184.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9939648245465602,
+      "avg_dice": 0.9969732788767665
+    },
+    {
+      "image": "img_0000187.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9869254295270948,
+      "avg_dice": 0.993417512717921
+    },
+    {
+      "image": "img_0000201.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9979166565957688,
+      "avg_dice": 0.9989572420864737
+    },
+    {
+      "image": "img_0000205.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9978877840178744,
+      "avg_dice": 0.9989427754656581
+    },
+    {
+      "image": "img_0000208.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9792476330531847,
+      "avg_dice": 0.9894862606648926
+    },
+    {
+      "image": "img_0000215.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9871838314765743,
+      "avg_dice": 0.9935493601466792
+    },
+    {
+      "image": "img_0000223.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9847272530385951,
+      "avg_dice": 0.9922952758323
+    },
+    {
+      "image": "img_0000226.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9594910599729132,
+      "avg_dice": 0.978865689796027
+    },
+    {
+      "image": "img_0000234.jpg",
+      "num_gt": 5,
+      "num_pred": 6,
+      "num_matched": 5,
+      "avg_iou": 0.9595046550872304,
+      "avg_dice": 0.9791328038104214
+    },
+    {
+      "image": "img_0000241.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.994461191294313,
+      "avg_dice": 0.9972229047474759
+    },
+    {
+      "image": "img_0000246.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9999563583545434,
+      "avg_dice": 0.999978178701113
+    },
+    {
+      "image": "img_0000247.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9965990090315884,
+      "avg_dice": 0.9982966079052292
+    },
+    {
+      "image": "img_0000252.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9950194809874889,
+      "avg_dice": 0.9975035236197063
+    },
+    {
+      "image": "img_0000266.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000275.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9943387466710398,
+      "avg_dice": 0.9971613381435777
+    },
+    {
+      "image": "img_0000277.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9932151796140116,
+      "avg_dice": 0.9965960421858205
+    },
+    {
+      "image": "img_0000283.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9998890577854583,
+      "avg_dice": 0.9999445258155147
+    },
+    {
+      "image": "img_0000311.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9916858909984465,
+      "avg_dice": 0.9958255922587343
+    },
+    {
+      "image": "img_0000313.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 0,
+      "avg_iou": 0.0,
+      "avg_dice": 0.0
+    },
+    {
+      "image": "img_0000320.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.8512382795806017,
+      "avg_dice": 0.9196420460508734
+    },
+    {
+      "image": "img_0000344.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9775519808616777,
+      "avg_dice": 0.9886485820066581
+    },
+    {
+      "image": "img_0000349.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9944329077011443,
+      "avg_dice": 0.99720868409393
+    },
+    {
+      "image": "img_0000357.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9871125137523844,
+      "avg_dice": 0.993514465759526
+    },
+    {
+      "image": "img_0000360.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9895475864395473,
+      "avg_dice": 0.9947463364879057
+    },
+    {
+      "image": "img_0000361.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9917756932766778,
+      "avg_dice": 0.9958708670102343
+    },
+    {
+      "image": "img_0000365.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9959880448653056,
+      "avg_dice": 0.997989990398482
+    },
+    {
+      "image": "img_0000369.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000370.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9980518922459993,
+      "avg_dice": 0.9990249964169795
+    },
+    {
+      "image": "img_0000374.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9830557011882156,
+      "avg_dice": 0.9914554599744063
+    },
+    {
+      "image": "img_0000391.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9632719982522985,
+      "avg_dice": 0.9812924537301012
+    },
+    {
+      "image": "img_0000409.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.994789478107404,
+      "avg_dice": 0.9973879339400067
+    },
+    {
+      "image": "img_0000453.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9951832305062068,
+      "avg_dice": 0.9975858009328942
+    },
+    {
+      "image": "img_0000468.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9826570305135881,
+      "avg_dice": 0.9912526628562079
+    },
+    {
+      "image": "img_0000472.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9931716870644084,
+      "avg_dice": 0.9965741471344857
+    },
+    {
+      "image": "img_0000490.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9920564830080718,
+      "avg_dice": 0.9960124037346907
+    },
+    {
+      "image": "img_0000493.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.994776746856173,
+      "avg_dice": 0.9973815349752502
+    },
+    {
+      "image": "img_0000494.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9873114053040644,
+      "avg_dice": 0.9936151955541189
+    },
+    {
+      "image": "img_0000496.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9947593586893153,
+      "avg_dice": 0.9973727952257219
+    },
+    {
+      "image": "img_0000503.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9855264229804209,
+      "avg_dice": 0.9927104586209167
+    },
+    {
+      "image": "img_0000510.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9940831722875907,
+      "avg_dice": 0.9970328079617553
+    },
+    {
+      "image": "img_0000512.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.977623975521865,
+      "avg_dice": 0.988685399876268
+    },
+    {
+      "image": "img_0000514.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9952355895611122,
+      "avg_dice": 0.9976121063277867
+    },
+    {
+      "image": "img_0000520.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9199546808645497,
+      "avg_dice": 0.9583087455484073
+    },
+    {
+      "image": "img_0000523.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9896412935533312,
+      "avg_dice": 0.994793681413714
+    },
+    {
+      "image": "img_0000529.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9928973949798907,
+      "avg_dice": 0.9964360407926667
+    },
+    {
+      "image": "img_0000531.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.996366381369237,
+      "avg_dice": 0.9981798838806979
+    },
+    {
+      "image": "img_0000532.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9872911888335621,
+      "avg_dice": 0.9936049577244404
+    },
+    {
+      "image": "img_0000534.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9928275167445808,
+      "avg_dice": 0.9964008509541579
+    },
+    {
+      "image": "img_0000540.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9957252138081099,
+      "avg_dice": 0.9978580286693209
+    },
+    {
+      "image": "img_0000551.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9955281229254859,
+      "avg_dice": 0.9977590508381519
+    },
+    {
+      "image": "img_0000554.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9898196449532061,
+      "avg_dice": 0.994883780008598
+    },
+    {
+      "image": "img_0000557.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9961469166671478,
+      "avg_dice": 0.9980697396064988
+    },
+    {
+      "image": "img_0000565.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9834448178390652,
+      "avg_dice": 0.9916533185032234
+    },
+    {
+      "image": "img_0000569.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9862082096169124,
+      "avg_dice": 0.9930562212378793
+    },
+    {
+      "image": "img_0000571.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9923095130212356,
+      "avg_dice": 0.9961399135382825
+    },
+    {
+      "image": "img_0000578.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9959126917552596,
+      "avg_dice": 0.9979521608026122
+    },
+    {
+      "image": "img_0000606.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9815272451792937,
+      "avg_dice": 0.9906775166146985
+    },
+    {
+      "image": "img_0000607.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9961450409629486,
+      "avg_dice": 0.9980687981294226
+    },
+    {
+      "image": "img_0000609.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.8377737597610465,
+      "avg_dice": 0.9117267621341777
+    },
+    {
+      "image": "img_0000611.jpg",
+      "num_gt": 1,
+      "num_pred": 7,
+      "num_matched": 1,
+      "avg_iou": 0.969523366308852,
+      "avg_dice": 0.984525883666836
+    },
+    {
+      "image": "img_0000616.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9950483722711744,
+      "avg_dice": 0.9975180412677469
+    },
+    {
+      "image": "img_0000618.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9936959087261648,
+      "avg_dice": 0.996837987555553
+    },
+    {
+      "image": "img_0000622.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9550934024689072,
+      "avg_dice": 0.9770309707585405
+    },
+    {
+      "image": "img_0000635.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9903231703825512,
+      "avg_dice": 0.9951380611141714
+    },
+    {
+      "image": "img_0000641.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9947122265311658,
+      "avg_dice": 0.9973491045983962
+    },
+    {
+      "image": "img_0000664.jpg",
+      "num_gt": 1,
+      "num_pred": 2,
+      "num_matched": 1,
+      "avg_iou": 0.9577689587143028,
+      "avg_dice": 0.9784289963850326
+    },
+    {
+      "image": "img_0000672.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991657084955146,
+      "avg_dice": 0.9995826801645606
+    },
+    {
+      "image": "img_0000673.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000683.jpg",
+      "num_gt": 1,
+      "num_pred": 2,
+      "num_matched": 1,
+      "avg_iou": 0.9828441839689593,
+      "avg_dice": 0.9913478748508111
+    },
+    {
+      "image": "img_0000702.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.978127875738592,
+      "avg_dice": 0.9889430180274663
+    },
+    {
+      "image": "img_0000713.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9811232174960057,
+      "avg_dice": 0.9904716767047669
+    },
+    {
+      "image": "img_0000719.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9800752952599492,
+      "avg_dice": 0.9899374004676751
+    },
+    {
+      "image": "img_0000721.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9955679607881393,
+      "avg_dice": 0.9977790587447043
+    },
+    {
+      "image": "img_0000744.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9940803562986572,
+      "avg_dice": 0.9970313915973122
+    },
+    {
+      "image": "img_0000745.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9876893989433714,
+      "avg_dice": 0.9938065770923904
+    },
+    {
+      "image": "img_0000759.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9709957057470444,
+      "avg_dice": 0.9852844457406048
+    },
+    {
+      "image": "img_0000774.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9815476253696254,
+      "avg_dice": 0.9906878974826898
+    },
+    {
+      "image": "img_0000779.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000786.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000794.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000829.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000842.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991595102921987,
+      "avg_dice": 0.9995795784661132
+    },
+    {
+      "image": "img_0000851.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9890044793422823,
+      "avg_dice": 0.9944706197236823
+    },
+    {
+      "image": "img_0000853.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9897308473669574,
+      "avg_dice": 0.9948389237435646
+    },
+    {
+      "image": "img_0000855.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9885268646812901,
+      "avg_dice": 0.9942277653644147
+    },
+    {
+      "image": "img_0000859.jpg",
+      "num_gt": 3,
+      "num_pred": 3,
+      "num_matched": 3,
+      "avg_iou": 0.9897051475337465,
+      "avg_dice": 0.9948258323308484
+    },
+    {
+      "image": "img_0000870.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9913842371290543,
+      "avg_dice": 0.9956734804311965
+    },
+    {
+      "image": "img_0000876.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9906368266532587,
+      "avg_dice": 0.9952946214212689
+    },
+    {
+      "image": "img_0000877.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9887672368142765,
+      "avg_dice": 0.9943487138163419
+    },
+    {
+      "image": "img_0000888.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9908814218849152,
+      "avg_dice": 0.9954198286171902
+    },
+    {
+      "image": "img_0000890.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9831178421579285,
+      "avg_dice": 0.9914870627033938
+    },
+    {
+      "image": "img_0000891.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9946054022452966,
+      "avg_dice": 0.9972954060243541
+    },
+    {
+      "image": "img_0000894.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9955900084877584,
+      "avg_dice": 0.9977901314932001
+    },
+    {
+      "image": "img_0000901.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000924.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991722040027187,
+      "avg_dice": 0.9995859306188711
+    },
+    {
+      "image": "img_0000931.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991636323027776,
+      "avg_dice": 0.999581641200496
+    },
+    {
+      "image": "img_0000935.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991635053441398,
+      "avg_dice": 0.9995815776680476
+    },
+    {
+      "image": "img_0000973.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000978.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000979.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000980.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0000991.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001004.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001013.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001042.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001047.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991659432672994,
+      "avg_dice": 0.9995827976484346
+    },
+    {
+      "image": "img_0001055.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001057.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991599137267775,
+      "avg_dice": 0.9995797803530101
+    },
+    {
+      "image": "img_0001067.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001068.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001074.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001089.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001105.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9998583101355817,
+      "avg_dice": 0.9999291500484309
+    },
+    {
+      "image": "img_0001128.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001133.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001144.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001156.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001159.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001168.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001173.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001177.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001189.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991618859235721,
+      "avg_dice": 0.9995807672793638
+    },
+    {
+      "image": "img_0001196.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9950074503972177,
+      "avg_dice": 0.9974974782165409
+    },
+    {
+      "image": "img_0001225.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9978903036255669,
+      "avg_dice": 0.9989440379331114
+    },
+    {
+      "image": "img_0001228.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.999920057749735,
+      "avg_dice": 0.9999600272771128
+    },
+    {
+      "image": "img_0001232.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001237.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9772519546856133,
+      "avg_dice": 0.9884951205836568
+    },
+    {
+      "image": "img_0001240.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001245.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001246.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9987271339679483,
+      "avg_dice": 0.9993631616790408
+    },
+    {
+      "image": "img_0001253.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001255.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001272.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.990024987350677,
+      "avg_dice": 0.994987493768808
+    },
+    {
+      "image": "img_0001290.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9999930126331592,
+      "avg_dice": 0.9999965063043738
+    },
+    {
+      "image": "img_0001298.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9875020687461937,
+      "avg_dice": 0.9937117392478034
+    },
+    {
+      "image": "img_0001301.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001302.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001312.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001325.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001337.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9994655179250602,
+      "avg_dice": 0.9997326875256671
+    },
+    {
+      "image": "img_0001358.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001373.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9927405397907818,
+      "avg_dice": 0.9963570469590686
+    },
+    {
+      "image": "img_0001375.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001383.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9994154953719575,
+      "avg_dice": 0.9997076622495947
+    },
+    {
+      "image": "img_0001384.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001385.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.99659055376681,
+      "avg_dice": 0.9982923658399778
+    },
+    {
+      "image": "img_0001388.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991757735847562,
+      "avg_dice": 0.9995877168850612
+    },
+    {
+      "image": "img_0001408.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001410.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9999473196326385,
+      "avg_dice": 0.9999736591224957
+    },
+    {
+      "image": "img_0001420.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9999970731503356,
+      "avg_dice": 0.9999985365730262
+    },
+    {
+      "image": "img_0001431.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001436.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001447.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991622033999631,
+      "avg_dice": 0.9995809261506584
+    },
+    {
+      "image": "img_0001453.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991678687272653,
+      "avg_dice": 0.9995837611809635
+    },
+    {
+      "image": "img_0001472.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001486.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991606987753012,
+      "avg_dice": 0.9995801732070798
+    },
+    {
+      "image": "img_0001491.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.989791244590932,
+      "avg_dice": 0.9948694339485011
+    },
+    {
+      "image": "img_0001493.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001498.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991432419817836,
+      "avg_dice": 0.9995714374036715
+    },
+    {
+      "image": "img_0001506.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001507.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991556472451159,
+      "avg_dice": 0.9995776453143868
+    },
+    {
+      "image": "img_0001518.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.99165566710429,
+      "avg_dice": 0.9958103536502161
+    },
+    {
+      "image": "img_0001519.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991658259216352,
+      "avg_dice": 0.999582738926632
+    },
+    {
+      "image": "img_0001520.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9959352351403605,
+      "avg_dice": 0.9979634785798279
+    },
+    {
+      "image": "img_0001524.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991675164481418,
+      "avg_dice": 0.999583584894708
+    },
+    {
+      "image": "img_0001532.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001554.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001560.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001574.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.999162218015516,
+      "avg_dice": 0.9995809334645611
+    },
+    {
+      "image": "img_0001583.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991538729967543,
+      "avg_dice": 0.9995767574398976
+    },
+    {
+      "image": "img_0001586.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9998755329806994,
+      "avg_dice": 0.999937762617099
+    },
+    {
+      "image": "img_0001606.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991655879174709,
+      "avg_dice": 0.999582619825205
+    },
+    {
+      "image": "img_0001609.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001620.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001629.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.999157491964906,
+      "avg_dice": 0.9995785684527206
+    },
+    {
+      "image": "img_0001633.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001636.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001639.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9253694687925659,
+      "avg_dice": 0.9612383324774354
+    },
+    {
+      "image": "img_0001646.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001649.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001666.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.997010989237398,
+      "avg_dice": 0.998503257729321
+    },
+    {
+      "image": "img_0001674.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001675.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001680.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9944288659568077,
+      "avg_dice": 0.9972066519201127
+    },
+    {
+      "image": "img_0001687.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001699.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9734634939359011,
+      "avg_dice": 0.9865533331902816
+    },
+    {
+      "image": "img_0001705.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001709.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991678687272653,
+      "avg_dice": 0.9995837611809635
+    },
+    {
+      "image": "img_0001712.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001715.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001717.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991670251522443,
+      "avg_dice": 0.9995833390420732
+    },
+    {
+      "image": "img_0001734.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001735.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001739.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991593176649443,
+      "avg_dice": 0.9995794820714751
+    },
+    {
+      "image": "img_0001749.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9894100873135815,
+      "avg_dice": 0.9946752858560471
+    },
+    {
+      "image": "img_0001757.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9860293326941134,
+      "avg_dice": 0.9929640625724013
+    },
+    {
+      "image": "img_0001759.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9580986144446679,
+      "avg_dice": 0.9777653719063966
+    },
+    {
+      "image": "img_0001766.jpg",
+      "num_gt": 2,
+      "num_pred": 2,
+      "num_matched": 2,
+      "avg_iou": 0.9907054416662846,
+      "avg_dice": 0.9953309767107615
+    },
+    {
+      "image": "img_0001770.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9926441832455486,
+      "avg_dice": 0.9963080362331398
+    },
+    {
+      "image": "img_0001778.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9869206677407827,
+      "avg_dice": 0.9934119784528864
+    },
+    {
+      "image": "img_0001787.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9859314441669977,
+      "avg_dice": 0.9929124683222809
+    },
+    {
+      "image": "img_0001788.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9898976468548428,
+      "avg_dice": 0.9949219655609691
+    },
+    {
+      "image": "img_0001795.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9878238716318626,
+      "avg_dice": 0.9938727873281572
+    },
+    {
+      "image": "img_0001798.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9899842682167432,
+      "avg_dice": 0.994966794453165
+    },
+    {
+      "image": "img_0001801.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9890858311171241,
+      "avg_dice": 0.9945112018261674
+    },
+    {
+      "image": "img_0001802.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9892537803368374,
+      "avg_dice": 0.994597425036621
+    },
+    {
+      "image": "img_0001804.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9909162058345611,
+      "avg_dice": 0.9954369404729637
+    },
+    {
+      "image": "img_0001809.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9475260830249143,
+      "avg_dice": 0.9719046354942756
+    },
+    {
+      "image": "img_0001814.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9921596192992036,
+      "avg_dice": 0.9960640803021519
+    },
+    {
+      "image": "img_0001815.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9930676963014508,
+      "avg_dice": 0.9965217921541684
+    },
+    {
+      "image": "img_0001825.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.991102062517785,
+      "avg_dice": 0.995531149482632
+    },
+    {
+      "image": "img_0001831.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9999380155823436,
+      "avg_dice": 0.9999690068306251
+    },
+    {
+      "image": "img_0001836.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001864.jpg",
+      "num_gt": 2,
+      "num_pred": 3,
+      "num_matched": 2,
+      "avg_iou": 0.9904779772321761,
+      "avg_dice": 0.9952160321703196
+    },
+    {
+      "image": "img_0001885.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001891.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001893.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001895.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001900.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001914.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991610378781026,
+      "avg_dice": 0.9995803429008461
+    },
+    {
+      "image": "img_0001926.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9798586759602186,
+      "avg_dice": 0.9898043116031509
+    },
+    {
+      "image": "img_0001943.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0001952.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991527626495559,
+      "avg_dice": 0.9995762017959442
+    },
+    {
+      "image": "img_0001958.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9900355175460529,
+      "avg_dice": 0.9949928117533127
+    },
+    {
+      "image": "img_0001966.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9903912548509461,
+      "avg_dice": 0.9951715728472917
+    },
+    {
+      "image": "img_0001976.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9958497736687306,
+      "avg_dice": 0.9979205717855004
+    },
+    {
+      "image": "img_0001985.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9951320443846086,
+      "avg_dice": 0.9975600834896655
+    },
+    {
+      "image": "img_0002000.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9962043327785525,
+      "avg_dice": 0.9980985577683
+    },
+    {
+      "image": "img_0002001.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9965000377656291,
+      "avg_dice": 0.9982469510803076
+    },
+    {
+      "image": "img_0002004.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9964791377240712,
+      "avg_dice": 0.9982364642788392
+    },
+    {
+      "image": "img_0002014.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9962663594441565,
+      "avg_dice": 0.998129688186058
+    },
+    {
+      "image": "img_0002024.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9915771230626614,
+      "avg_dice": 0.9957707503064778
+    },
+    {
+      "image": "img_0002025.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.989024331190064,
+      "avg_dice": 0.9944818830831652
+    },
+    {
+      "image": "img_0002030.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9938691420208727,
+      "avg_dice": 0.9969251452615825
+    },
+    {
+      "image": "img_0002035.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9921294979959698,
+      "avg_dice": 0.9960492016146804
+    },
+    {
+      "image": "img_0002052.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9951820681348976,
+      "avg_dice": 0.9975852169373163
+    },
+    {
+      "image": "img_0002065.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0002066.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0002071.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.992433975192205,
+      "avg_dice": 0.9962026220682846
+    },
+    {
+      "image": "img_0002079.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9966905329467154,
+      "avg_dice": 0.9983425237919066
+    },
+    {
+      "image": "img_0002098.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9965462195770863,
+      "avg_dice": 0.9982701224799868
+    },
+    {
+      "image": "img_0002105.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9948639253501614,
+      "avg_dice": 0.9974253508800421
+    },
+    {
+      "image": "img_0002110.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9947133593199475,
+      "avg_dice": 0.9973496739993486
+    },
+    {
+      "image": "img_0002112.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.995300205410167,
+      "avg_dice": 0.9976445676810488
+    },
+    {
+      "image": "img_0002119.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9958090321620097,
+      "avg_dice": 0.9979001158074476
+    },
+    {
+      "image": "img_0002126.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9947887242792041,
+      "avg_dice": 0.9973875550541429
+    },
+    {
+      "image": "img_0002127.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9933917734563517,
+      "avg_dice": 0.996684933372535
+    },
+    {
+      "image": "img_0002136.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0002139.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9998275821619409,
+      "avg_dice": 0.999913783648352
+    },
+    {
+      "image": "img_0002143.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0002145.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0002146.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.9991221535175941,
+      "avg_dice": 0.9995608840205882
+    },
+    {
+      "image": "img_0002150.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0002155.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 0.999976333949398,
+      "avg_dice": 0.9999881668346768
+    },
+    {
+      "image": "img_0002156.jpg",
+      "num_gt": 1,
+      "num_pred": 1,
+      "num_matched": 1,
+      "avg_iou": 1.0,
+      "avg_dice": 1.0
+    },
+    {
+      "image": "img_0002159.jpg",
+      "num_gt": 1,
+      "num_pred": 14,
+      "num_matched": 1,
+      "avg_iou": 0.7434022008639861,
+      "avg_dice": 0.8528177840954597
+    },
+    {
+      "image": "img_0002164.jpg",
+      "num_gt": 3,
+      "num_pred": 6,
+      "num_matched": 3,
+      "avg_iou": 0.9881471838135681,
+      "avg_dice": 0.9940350896832446
+    },
+    {
+      "image": "img_0002166.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9899589812957914,
+      "avg_dice": 0.994949906433967
+    },
+    {
+      "image": "img_0002168.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9858183221209655,
+      "avg_dice": 0.9928573617717454
+    },
+    {
+      "image": "img_0002172.jpg",
+      "num_gt": 4,
+      "num_pred": 4,
+      "num_matched": 4,
+      "avg_iou": 0.9871200580098725,
+      "avg_dice": 0.993515107030595
+    }
+  ]
+}
