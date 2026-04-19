@@ -462,11 +462,11 @@ class ModelTester:
 
 
 def main():
-    MODEL_PATH = '../runs/segment/trained_models/photo_segmentation_model_yolo8s/weights/best.pt'
-    TEST_IMAGES_DIR = '../photo_dataset/images/test'
-    TEST_LABELS_DIR = '../photo_dataset/labels/test'
+    MODEL_PATH = '../../runs/segment/trained_models/photo_segmentation_model_yolo8s/weights/best.pt'
+    TEST_IMAGES_DIR = '../../photo_dataset/images/test'
+    TEST_LABELS_DIR = '../../photo_dataset/labels/test'
     CONF_THRESHOLD = 0.25
-    SAVE_DIR = '../test_results'
+    SAVE_DIR = '../../test_results'
     MODE = 'all'
 
     print(f"\nKONFIGURÁCIA:")

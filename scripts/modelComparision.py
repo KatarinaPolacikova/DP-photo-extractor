@@ -30,14 +30,22 @@ def plot_comprehensive_comparison(v8_path, v11_path, unet_path, save_dir='test_r
         return
 
     # --- 1. KONFÚZNE MATICE ---
-    fig, axes = plt.subplots(1, len(models_data), figsize=(6 * len(models_data), 6))
-    if len(models_data) == 1: axes = [axes]
+    fig, axes = plt.subplots(
+        1,
+        len(models_data),
+        figsize=(6 * len(models_data), 6),
+        constrained_layout=True
+    )
 
+    if len(models_data) == 1:
+        axes = [axes]
+
+    # Farby: TP, FP, FN, TN
     custom_colors = np.array([
-        [0.7, 0.9, 0.7, 1],  # TP (Zelená)
-        [1.0, 0.8, 0.8, 1],  # FP (Červená)
-        [1.0, 0.9, 0.7, 1],  # FN (Oranžová)
-        [0.9, 0.9, 0.9, 1]  # TN (Sivá)
+        [0.7, 0.9, 0.7, 1],  # TP - zelená
+        [1.0, 0.8, 0.8, 1],  # FP - červená
+        [1.0, 0.9, 0.7, 1],  # FN - oranžová
+        [0.9, 0.9, 0.9, 1]  # TN - sivá
     ])
 
     for ax, data, title in zip(axes, models_data, model_names):
@@ -45,24 +53,60 @@ def plot_comprehensive_comparison(v8_path, v11_path, unet_path, save_dir='test_r
         fp = data['total_pred_photos'] - tp
         fn = data['total_gt_photos'] - tp
 
-        ax.imshow(np.array([[0, 1], [2, 3]]), cmap=ListedColormap(custom_colors), interpolation='nearest')
-        ax.set_title(f'Konfúzna matica: {title}', fontsize=14, fontweight='bold', pad=15)
+        # Farebná matica
+        ax.imshow(
+            np.array([[0, 1], [2, 3]]),
+            cmap=ListedColormap(custom_colors)
+        )
 
-        cell_data = [[(f"TP\n{tp}", 0, 0), (f"FP\n{fp}", 0, 1)],
-                     [(f"FN\n{fn}", 1, 0), (f"TN\nN/A", 1, 1)]]
+        # Titulok
+        ax.set_title(
+            f'Konfúzna matica: {title}',
+            fontsize=15,
+            fontweight='bold',
+            pad=20
+        )
+
+        # Text v bunkách
+        cell_data = [
+            [(f"TP\n{tp}", 0, 0), (f"FP\n{fp}", 0, 1)],
+            [(f"FN\n{fn}", 1, 0), (f"TN\nN/A", 1, 1)]
+        ]
 
         for row in cell_data:
             for text, i, j in row:
-                ax.text(j, i, text, ha="center", va="center", fontsize=12, fontweight='bold')
+                ax.text(
+                    j, i, text,
+                    ha="center",
+                    va="center",
+                    fontsize=14,
+                    fontweight='bold'
+                )
 
-        ax.set_xticks([0, 1]);
+        # Osy
+        ax.set_xticks([0, 1])
         ax.set_yticks([0, 1])
-        ax.set_xticklabels(['Pred: FOTO', 'Pred: NIČ']);
-        ax.set_yticklabels(['Real: FOTO', 'Real: NIČ'], rotation=90, va='center')
+
+        ax.set_xticklabels(
+            ['Pred: FOTO', 'Pred: NIČ'],
+            fontsize=12,
+            fontweight='bold'
+        )
+
+        ax.set_yticklabels(
+            ['Real: FOTO', 'Real: NIČ'],
+            fontsize=12,
+            fontweight='bold'
+        )
+
         ax.grid(False)
 
-    plt.tight_layout()
-    plt.savefig(os.path.join(save_dir, 'confusion_matrixes.png'), dpi=200)
+    # Uloženie
+    plt.savefig(
+        os.path.join(save_dir, 'confusion_matrixes.png'),
+        dpi=300,
+        bbox_inches='tight'
+    )
     plt.close()
 
     # --- 2. STĹPCOVÝ GRAF METRÍK ---
@@ -107,6 +151,6 @@ def plot_comprehensive_comparison(v8_path, v11_path, unet_path, save_dir='test_r
 # Spustenie
 plot_comprehensive_comparison(
     '../test_results/overall_metrics_yolo8s.json',
-    'test_results/overall_metrics_yolo11s.json',
-    'test_results/overall_metrics_unet.json'
+    '../test_results/overall_metrics_yolo11s.json',
+    '../test_results/overall_metrics_unet.json'
 )

@@ -270,9 +270,9 @@ names:
     ax6.grid(alpha=0.3)
 
     plt.tight_layout()
-    plt.savefig('eda_analyza.png', dpi=150)
+    plt.savefig('eda_dataset_analysis.png', dpi=150)
 
-    print(f"\nGRAF uložený ako 'eda_analyza.png'")
+    print(f"\nGRAF uložený ako 'eda_dataset_analysis.png'")
     print(f"YAML súbor pripravený v '{OUTPUT_DIR}/dataset.yaml'")
 
     # Export štatistík do textového súboru
