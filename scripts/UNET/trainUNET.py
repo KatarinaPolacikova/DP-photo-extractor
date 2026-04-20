@@ -7,6 +7,9 @@ import segmentation_models_pytorch as smp
 from segmentation_models_pytorch.utils.metrics import IoU, Precision, Recall, Fscore
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
+
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 
@@ -49,38 +52,37 @@ def visualize_results(model, dataset, device, n=3):
             pred = (pred > 0.5).float().cpu().squeeze().numpy()
 
         img_show = img.permute(1, 2, 0).cpu().numpy()
-        # Denormalizácia pre zobrazenie
         img_show = (img_show * [0.229, 0.224, 0.225]) + [0.485, 0.456, 0.406]
         img_show = np.clip(img_show, 0, 1)
 
         plt.subplot(n, 3, i * 3 + 1)
         plt.imshow(img_show)
-        plt.title("Pôvodný sken")
+        plt.title("Original image")
         plt.axis('off')
 
         plt.subplot(n, 3, i * 3 + 2)
         plt.imshow(mask.squeeze(), cmap='gray')
-        plt.title("Ground Truth Maska")
+        plt.title("Ground Truth Mask")
         plt.axis('off')
 
         plt.subplot(n, 3, i * 3 + 3)
         plt.imshow(pred, cmap='gray')
-        plt.title("Predikcia modelu")
+        plt.title("Model Prediction")
         plt.axis('off')
 
     plt.tight_layout()
-    plt.savefig("prediction_samples.png")
-    plt.show()
+    os.makedirs("../../runs/unet", exist_ok=True)
+    plt.savefig("../../runs/unet/prediction_samples.png")
+    plt.close()
 
 
 def train_model():
     ROOT_PATH = "../../photo_dataset"
     DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    EPOCHS = 25
+    EPOCHS = 30
     BATCH_SIZE = 8
     LR = 1e-4
 
-    # Augmentácie
     train_transform = A.Compose([
         A.Resize(512, 512),
         A.Rotate(limit=45, p=0.5),
@@ -95,13 +97,11 @@ def train_model():
         ToTensorV2(),
     ])
 
-    # Loader
     train_ds = PhotoDataset(ROOT_PATH, "train", transforms=train_transform)
     val_ds = PhotoDataset(ROOT_PATH, "val", transforms=val_transform)
     train_loader = DataLoader(train_ds, batch_size=BATCH_SIZE, shuffle=True, num_workers=2)
     val_loader = DataLoader(val_ds, batch_size=BATCH_SIZE, shuffle=False, num_workers=2)
 
-    # Model
     model = smp.Unet(
         encoder_name="resnet34",
         encoder_weights="imagenet",
@@ -113,7 +113,6 @@ def train_model():
     optimizer = torch.optim.Adam(model.parameters(), lr=LR)
     loss_fn = smp.losses.DiceLoss(mode='binary')
 
-    # Metriky
     metrics = {
         "IoU": smp.utils.metrics.IoU(threshold=0.5),
         "Dice": smp.utils.metrics.Fscore(threshold=0.5),
@@ -141,7 +140,6 @@ def train_model():
             optimizer.step()
             train_loss += loss.item()
 
-        # Validácia
         model.eval()
         val_loss = 0
         scores = {k: 0 for k in metrics.keys()}
@@ -152,16 +150,14 @@ def train_model():
                 output = model(images)
                 val_loss += loss_fn(output, masks).item()
 
-                # Výpočet každej metriky
                 for name, fn in metrics.items():
                     scores[name] += fn(output, masks).item()
 
-        # Výpočet priemerov za celú epochu
         train_loss /= len(train_loader)
         val_loss /= len(val_loader)
-        for k in scores: scores[k] /= len(val_loader)
+        for k in scores:
+            scores[k] /= len(val_loader)
 
-        # Uloženie do histórie pre grafy
         history["train_loss"].append(train_loss)
         history["val_loss"].append(val_loss)
         history["val_iou"].append(scores["IoU"])
@@ -169,22 +165,19 @@ def train_model():
         history["val_precision"].append(scores["Precision"])
         history["val_recall"].append(scores["Recall"])
 
-        # Detailný výpis do konzoly
         print(f"Epoch {epoch + 1:02d} | Loss: {train_loss:.4f}/{val_loss:.4f} | "
               f"IoU: {scores['IoU']:.4f} | Dice: {scores['Dice']:.4f} | "
               f"Prec: {scores['Precision']:.4f} | Rec: {scores['Recall']:.4f}")
 
-
     print("\n" + "=" * 30)
-    print("FINÁLNE VÝSLEDKY")
+    print("FINAL RESULTS")
     print("=" * 30)
     for k, v in scores.items():
         print(f"{k:10}: {v:.4f}")
 
-    # Uloženie modelu
+    os.makedirs("../../runs/unet", exist_ok=True)
     torch.save(model.state_dict(), "../../runs/unet/final_unet_model.pt")
 
-    # Grafy
     plt.figure(figsize=(12, 5))
     plt.subplot(1, 2, 1)
     plt.plot(history["train_loss"], label="Train")
@@ -195,11 +188,14 @@ def train_model():
     plt.subplot(1, 2, 2)
     plt.plot(history["val_iou"], label="IoU")
     plt.plot(history["val_dice"], label="Dice")
-    plt.title("Metriky presnosti")
+    plt.title("Accuracy metrics")
     plt.legend()
-    plt.savefig("final_metrics_graph.png")
 
-    print("\nTrénovanie dokončené.")
+    plt.tight_layout()
+    plt.savefig("../../runs/unet/final_metrics_graph.png")
+    plt.close()
+
+    print("\nHOTOVO.")
     visualize_results(model, val_ds, DEVICE)
 
 
