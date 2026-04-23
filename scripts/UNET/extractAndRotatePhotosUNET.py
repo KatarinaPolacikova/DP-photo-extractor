@@ -94,7 +94,44 @@ def load_unet_model(path):
     return model
 
 
-# --- HLAVNÁ FUNKCIA NA VYREZÁVANIE MÁSK---
+# Detekcia rotácie (Osoby/Objekty/Krajinky)
+def rotate_photo(cropped, obj_model):
+    candidates = []
+
+    for angle in [0, 90, 180, 270]:
+        temp = cropped.copy()
+        if angle == 90:
+            temp = cv2.rotate(temp, cv2.ROTATE_90_CLOCKWISE)
+        elif angle == 180:
+            temp = cv2.rotate(temp, cv2.ROTATE_180)
+        elif angle == 270:
+            temp = cv2.rotate(temp, cv2.ROTATE_90_COUNTERCLOCKWISE)
+
+        res_p = obj_model.predict(source=temp, conf=0.3, classes=CLASS_PERSON, verbose=False)[0]
+        res_o = obj_model.predict(source=temp, conf=0.3, classes=CLASSES_OTHER, verbose=False)[0]
+
+        p_max = res_p.boxes.conf.cpu().numpy().max() if len(res_p.boxes) > 0 else 0.0
+        o_max = res_o.boxes.conf.cpu().numpy().max() if len(res_o.boxes) > 0 else 0.0
+        phys = get_physics_score(temp)
+
+        candidates.append({'angle': angle, 'p': p_max, 'o': o_max, 'phys': phys, 'img': temp})
+
+    # --- ROZHODOVACIA LOGIKA ---
+    # 1. Priorita: Osoby
+    best_p = max(candidates, key=lambda x: x['p'])
+    if best_p['p'] > 0.4:
+        return best_p['img'], "Osoby", best_p['angle']
+
+    # 2. Priorita: Objekty (autá, zvieratá, predmety)
+    best_o = max(candidates, key=lambda x: x['o'])
+    if best_o['o'] > 0.5:
+        return best_o['img'], "Objekty", best_o['angle']
+
+    # 3. Priorita: Fyzika (Krajinky/Budovy bez osôb)
+    best_phys = max(candidates, key=lambda x: x['phys'])
+    return best_phys['img'], "Budovy/Krajinky", best_phys['angle']
+
+
 def crop_photos_unet(input_image_path):
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -154,42 +191,18 @@ def crop_photos_unet(input_image_path):
         inset_w, inset_h = max(1, int(new_w * 0.015)), max(1, int(new_h * 0.015))
         cropped = warped[inset_h:-inset_h, inset_w:-inset_w] if new_w > 2 * inset_w else warped
 
-        # Detekcia rotácie (Osoby/Objekty/Krajinky)
-        candidates = []
-        for angle in [0, 90, 180, 270]:
-            temp = cropped.copy()
-            if angle == 90:
-                temp = cv2.rotate(temp, cv2.ROTATE_90_CLOCKWISE)
-            elif angle == 180:
-                temp = cv2.rotate(temp, cv2.ROTATE_180)
-            elif angle == 270:
-                temp = cv2.rotate(temp, cv2.ROTATE_90_COUNTERCLOCKWISE)
-
-            res_p = obj_model.predict(source=temp, conf=0.3, classes=CLASS_PERSON, verbose=False)[0]
-            res_o = obj_model.predict(source=temp, conf=0.3, classes=CLASSES_OTHER, verbose=False)[0]
-            p_max = res_p.boxes.conf.cpu().numpy().max() if len(res_p.boxes) > 0 else 0.0
-            o_max = res_o.boxes.conf.cpu().numpy().max() if len(res_o.boxes) > 0 else 0.0
-            phys = get_physics_score(temp)
-            candidates.append({'angle': angle, 'p': p_max, 'o': o_max, 'phys': phys, 'img': temp})
-
-        best_p = max(candidates, key=lambda x: x['p'])
-        if best_p['p'] > 0.4:
-            final, method, ang = best_p['img'], "Osoby", best_p['angle']
-        else:
-            best_o = max(candidates, key=lambda x: x['o'])
-            if best_o['o'] > 0.5:
-                final, method, ang = best_o['img'], "Objekty", best_o['angle']
-            else:
-                best_phys = max(candidates, key=lambda x: x['phys'])
-                final, method, ang = best_phys['img'], "Budovy/Krajinky", best_phys['angle']
+        # Rotácie
+        final_img, method, ang = rotate_photo(cropped, obj_model)
 
         photo_count += 1
         save_path = os.path.join(OUTPUT_DIR, f"{base_name}_{photo_count}.jpg")
-        cv2.imwrite(save_path, final, [int(cv2.IMWRITE_JPEG_QUALITY), 95])
+        cv2.imwrite(save_path, final_img, [int(cv2.IMWRITE_JPEG_QUALITY), 95])
         print(f"  Foto {photo_count} - Rotácia: {ang}° Metóda: {method} - Uložené")
 
+    print(f"{'=' * 60}")
     print(f"\nHOTOVO! Extrahovaných: {photo_count} fotiek")
+    print(f"{'=' * 60}\n")
 
 
 if __name__ == "__main__":
-    crop_photos_unet("../../photo_dataset/images/test/img_0000234.jpg")
+    crop_photos_unet("../../photo_dataset/images/test/img_0000172.jpg")

@@ -4,7 +4,6 @@ import numpy as np
 from ultralytics import YOLO
 
 MODEL_PATH = "../../runs/segment/trained_models/photo_segmentation_model_yolo11s/weights/best.pt"
-# MODEL_PATH = "unet_model.pt"
 OBJECT_MODEL_PATH = "../../yoloModels/yolov8n.pt"
 OUTPUT_DIR = "../../extracted_photos"
 CONF_THRESHOLD = 0.25
@@ -29,6 +28,7 @@ def order_points(pts):
 def get_distance(p1, p2):
     """Vypočíta euklidovskú vzdialenosť medzi dvoma bodmi"""
     return np.sqrt(((p1[0] - p2[0]) ** 2) + ((p1[1] - p2[1]) ** 2))
+
 
 def get_physics_score(img):
     """
@@ -65,6 +65,7 @@ def get_physics_score(img):
     sky_val += 300 if top_mean > bot_mean else 0
 
     return h_val + sky_val
+
 
 def refine_mask_with_convex_hull(yolo_mask, w, h):
     """
@@ -120,6 +121,47 @@ def refine_mask_with_convex_hull(yolo_mask, w, h):
         approx = cv2.boxPoints(rect).astype(int).reshape(-1, 1, 2)
 
     return approx.squeeze()
+
+
+def rotate_photo(cropped, obj_model):
+    """
+        Vykoná analýzu 4 uhlov rotácie (0°, 90°, 180°, 270°) a vyberie ten najvhodnejší
+        na základe detekcie osôb, iných objektov a fyzikálneho skóre (horizont/obloha).
+        """
+    candidates = []
+
+    for angle in [0, 90, 180, 270]:
+        temp = cropped.copy()
+        if angle == 90:
+            temp = cv2.rotate(temp, cv2.ROTATE_90_CLOCKWISE)
+        elif angle == 180:
+            temp = cv2.rotate(temp, cv2.ROTATE_180)
+        elif angle == 270:
+            temp = cv2.rotate(temp, cv2.ROTATE_90_COUNTERCLOCKWISE)
+
+        res_p = obj_model.predict(source=temp, conf=0.3, classes=CLASS_PERSON, verbose=False)[0]
+        res_o = obj_model.predict(source=temp, conf=0.3, classes=CLASSES_OTHER, verbose=False)[0]
+
+        p_max = res_p.boxes.conf.cpu().numpy().max() if len(res_p.boxes) > 0 else 0.0
+        o_max = res_o.boxes.conf.cpu().numpy().max() if len(res_o.boxes) > 0 else 0.0
+        phys = get_physics_score(temp)
+
+        candidates.append({'angle': angle, 'p': p_max, 'o': o_max, 'phys': phys, 'img': temp})
+
+    # --- ROZHODOVACIA LOGIKA ---
+    # 1. Priorita: Osoby
+    best_p = max(candidates, key=lambda x: x['p'])
+    if best_p['p'] > 0.4:
+        return best_p['img'], "Osoby", best_p['angle']
+
+    # 2. Priorita: Objekty (autá, zvieratá, predmety)
+    best_o = max(candidates, key=lambda x: x['o'])
+    if best_o['o'] > 0.5:
+        return best_o['img'], "Objekty", best_o['angle']
+
+    # 3. Priorita: Fyzika (Krajinky/Budovy bez osôb)
+    best_phys = max(candidates, key=lambda x: x['phys'])
+    return best_phys['img'], "Budovy/Krajinky", best_phys['angle']
 
 
 def crop_photos(input_image_path):
@@ -202,53 +244,15 @@ def crop_photos(input_image_path):
         else:
             cropped = warped
 
-        # Detekcia rotácie
-        candidates = []
-
-        for angle in [0, 90, 180, 270]:
-            temp = cropped.copy()
-            if angle == 90:
-                temp = cv2.rotate(temp, cv2.ROTATE_90_CLOCKWISE)
-            elif angle == 180:
-                temp = cv2.rotate(temp, cv2.ROTATE_180)
-            elif angle == 270:
-                temp = cv2.rotate(temp, cv2.ROTATE_90_COUNTERCLOCKWISE)
-
-            res_p = obj_model.predict(source=temp, conf=0.3, classes=CLASS_PERSON, verbose=False)[0]
-            res_o = obj_model.predict(source=temp, conf=0.3, classes=CLASSES_OTHER, verbose=False)[0]
-
-            p_max = res_p.boxes.conf.cpu().numpy().max() if len(res_p.boxes) > 0 else 0.0
-            o_max = res_o.boxes.conf.cpu().numpy().max() if len(res_o.boxes) > 0 else 0.0
-            phys = get_physics_score(temp)
-
-            candidates.append({'angle': angle, 'p': p_max, 'o': o_max, 'phys': phys, 'img': temp})
-
-        # --- ROZHODOVACIA LOGIKA ---
-        # 1. Priorita: Osoby
-        best_p = max(candidates, key=lambda x: x['p'])
-        if best_p['p'] > 0.4:
-            final = best_p['img']
-            method, ang = "Osoby", best_p['angle']
-
-        # 2. Priorita: Objekty (autá, zvieratá, predmety)
-        else:
-            best_o = max(candidates, key=lambda x: x['o'])
-            if best_o['o'] > 0.5:
-                final = best_o['img']
-                method, ang = "Objekty", best_o['angle']
-
-            # 3. Priorita: Fyzika (Krajinky/Budovy bez osôb)
-            else:
-                best_phys = max(candidates, key=lambda x: x['phys'])
-                final = best_phys['img']
-                method, ang = "Budovy/Krajinky", best_phys['angle']
+        # Rotácie
+        final_img, method, ang = rotate_photo(cropped, obj_model)
 
         photo_count += 1
         save_path = os.path.join(OUTPUT_DIR, f"{base_name}_{photo_count}.jpg")
-        cv2.imwrite(save_path, final, [int(cv2.IMWRITE_JPEG_QUALITY), 95])
+        cv2.imwrite(save_path, final_img, [int(cv2.IMWRITE_JPEG_QUALITY), 95])
         print(
             f"Foto {photo_count} - Rotácia: {ang}° Metóda: {method}")
-        print(f"  Uložené: {os.path.basename(save_path)} ({final.shape[1]}x{final.shape[0]})\n")
+        print(f"  Uložené: {os.path.basename(save_path)} ({final_img.shape[1]}x{final_img.shape[0]})\n")
 
     print(f"{'=' * 60}")
     print(f"HOTOVO! Extrahovaných: {photo_count} fotiek")
@@ -256,4 +260,4 @@ def crop_photos(input_image_path):
 
 
 if __name__ == "__main__":
-    crop_photos("../../photo_dataset/images/test/img_0000234.jpg")
+    crop_photos("../../photo_dataset/images/test/img_0000172.jpg")
