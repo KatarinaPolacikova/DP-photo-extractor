@@ -7,7 +7,7 @@ from ultralytics import YOLO
 
 # --- KONFIGURÁCIA ---
 UNET_MODEL_PATH = "../../runs/unet/final_unet_model.pt"
-OBJECT_MODEL_PATH = "../yoloModels/yolov8n.pt"
+OBJECT_MODEL_PATH = "../../yoloModels/yolov8n.pt"
 OUTPUT_DIR = "../../extracted_photos_UNET"
 CONF_THRESHOLD = 0.5  # Prah pre binárnu masku U-Netu
 
@@ -34,27 +34,52 @@ def get_distance(p1, p2):
 
 
 def get_physics_score(img):
+    """
+    Vyhodnocuje, či je fotka správne otočená (vrch je hore).
+    Vracia číselné skóre. Najvyššie skóre vyhráva.
+    """
     h, w = img.shape[:2]
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+    # Rozdelenie obrazu na vrchnú (obloha) a spodnú (zem) polovicu
+    top_half = gray[:h // 2, :]
+    bot_half = gray[h // 2:, :]
+
+    # 1. SKÓRE SVETLOSTI: Vrch by mal byť svetlejší
+    top_mean = np.mean(top_half)
+    bot_mean = np.mean(bot_half)
+    # Normalizácia rozdielu (čím viac do plusu, tým lepšie)
+    brightness_score = (top_mean - bot_mean) / 255.0
+
+    # 2. SKÓRE HRÁN (Textúry): Spodok by mal byť štruktúrovanejší
     edges = cv2.Canny(gray, 50, 150)
-    lines = cv2.HoughLinesP(edges, 1, np.pi / 180, 40, minLineLength=w // 4, maxLineGap=20)
-    h_val = 0
+    top_edges = np.count_nonzero(edges[:h // 2, :])
+    bot_edges = np.count_nonzero(edges[h // 2:, :])
+
+    total_edges = max(top_edges + bot_edges, 1)
+    # Normalizovaný rozdiel (kladné číslo znamená viac hrán dole)
+    edge_score = (bot_edges - top_edges) / total_edges
+
+    # 3. SKÓRE ČIAR: Jemná preferencia pre vodorovný horizont
+    lines = cv2.HoughLinesP(edges, 1, np.pi / 180, 40, minLineLength=max(w, h) // 4, maxLineGap=20)
+    horiz_len = 0
+    vert_len = 0
     if lines is not None:
         for l in lines:
             x1, y1, x2, y2 = l[0]
             angle = np.abs(np.arctan2(y2 - y1, x2 - x1) * 180 / np.pi)
             length = np.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
-            if angle < 10 or angle > 170:
-                h_val += length
-            elif 80 < angle < 100:
-                h_val += length * 0.5
-    top_std = np.std(gray[:h // 4, :]);
-    bot_std = np.std(gray[3 * h // 4:, :])
-    sky_val = 500 if top_std < bot_std else 0
-    top_mean = np.mean(gray[:h // 4, :]);
-    bot_mean = np.mean(gray[3 * h // 4:, :])
-    sky_val += 300 if top_mean > bot_mean else 0
-    return h_val + sky_val
+            if angle < 20 or angle > 160:
+                horiz_len += length
+            elif 70 < angle < 110:
+                vert_len += length
+
+    total_len = max(horiz_len + vert_len, 1)
+    line_score = (horiz_len - vert_len) / total_len
+
+    final_score = (brightness_score * 2.0) + (edge_score * 1.5) + (line_score * 0.5)
+
+    return final_score
 
 
 def refine_mask_with_convex_hull(mask_resized, w, h):
@@ -205,4 +230,4 @@ def crop_photos_unet(input_image_path):
 
 
 if __name__ == "__main__":
-    crop_photos_unet("../../photo_dataset/images/test/img_0000172.jpg")
+    crop_photos_unet("../../photo_dataset/images/test/img_0000234.jpg")
