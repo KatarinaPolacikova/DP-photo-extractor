@@ -269,3 +269,4 @@ def crop_photos_unet(input_image_path):
 
 if __name__ == "__main__":
     crop_photos_unet("../../photo_dataset/images/test/img_0000172.jpg")
+
