@@ -87,17 +87,22 @@ def refine_mask_with_convex_hull(mask_resized, w, h):
     kernel = np.ones((5, 5), np.uint8)
     mask_binary = cv2.morphologyEx(mask_binary, cv2.MORPH_CLOSE, kernel, iterations=2)
     contours, _ = cv2.findContours(mask_binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    if not contours: return None
+
+    if not contours:
+        return None
+
     largest_contour = max(contours, key=cv2.contourArea)
     hull = cv2.convexHull(largest_contour)
     perimeter = cv2.arcLength(hull, True)
     epsilon = 0.005 * perimeter
     approx = cv2.approxPolyDP(hull, epsilon, True)
     iteration = 0
+
     while len(approx) > 4 and iteration < 50:
         epsilon *= 1.03
         approx = cv2.approxPolyDP(hull, epsilon, True)
         iteration += 1
+
     if len(approx) != 4:
         rect = cv2.minAreaRect(hull)
         approx = cv2.boxPoints(rect).astype(int).reshape(-1, 1, 2)
@@ -125,6 +130,7 @@ def rotate_photo(cropped, obj_model):
 
     for angle in [0, 90, 180, 270]:
         temp = cropped.copy()
+
         if angle == 90:
             temp = cv2.rotate(temp, cv2.ROTATE_90_CLOCKWISE)
         elif angle == 180:
@@ -132,24 +138,53 @@ def rotate_photo(cropped, obj_model):
         elif angle == 270:
             temp = cv2.rotate(temp, cv2.ROTATE_90_COUNTERCLOCKWISE)
 
-        res_p = obj_model.predict(source=temp, conf=0.3, classes=CLASS_PERSON, verbose=False)[0]
-        res_o = obj_model.predict(source=temp, conf=0.3, classes=CLASSES_OTHER, verbose=False)[0]
+        # --- DETEKCIA ---
+        res_p = obj_model.predict(source=temp, conf=0.25, classes=CLASS_PERSON, verbose=False)[0]
+        res_o = obj_model.predict(source=temp, conf=0.25, classes=CLASSES_OTHER, verbose=False)[0]
 
-        p_max = res_p.boxes.conf.cpu().numpy().max() if len(res_p.boxes) > 0 else 0.0
-        o_max = res_o.boxes.conf.cpu().numpy().max() if len(res_o.boxes) > 0 else 0.0
+        # --- OSOBY ---
+        if len(res_p.boxes) > 0:
+            p_scores = res_p.boxes.conf.cpu().numpy()
+            p_sum = float(p_scores.sum())
+            p_count = len(p_scores)
+        else:
+            p_sum = 0.0
+            p_count = 0
+
+        # --- OBJEKTY ---
+        if len(res_o.boxes) > 0:
+            o_scores = res_o.boxes.conf.cpu().numpy()
+            o_sum = float(o_scores.sum())
+        else:
+            o_sum = 0.0
+
+        # --- FYZIKA ---
         phys = get_physics_score(temp)
 
-        candidates.append({'angle': angle, 'p': p_max, 'o': o_max, 'phys': phys, 'img': temp})
+        # --- PENALIZÁCIA 180° ---
+        penalty = 0.9 if angle == 180 else 1.0
+
+        candidates.append({
+            'angle': angle,
+            'img': temp,
+            'p_sum': p_sum * penalty,
+            'p_count': p_count,
+            'o_sum': o_sum,
+            'phys': phys
+        })
+
 
     # --- ROZHODOVACIA LOGIKA ---
     # 1. Priorita: Osoby
-    best_p = max(candidates, key=lambda x: x['p'])
-    if best_p['p'] > 0.4:
+    best_p = max(candidates, key=lambda x: (x['p_count'], x['p_sum']))
+
+    if best_p['p_count'] > 0:
         return best_p['img'], "Osoby", best_p['angle']
 
     # 2. Priorita: Objekty (autá, zvieratá, predmety)
-    best_o = max(candidates, key=lambda x: x['o'])
-    if best_o['o'] > 0.5:
+    best_o = max(candidates, key=lambda x: x['o_sum'])
+
+    if best_o['o_sum'] > 0.5:
         return best_o['img'], "Objekty", best_o['angle']
 
     # 3. Priorita: Fyzika (Krajinky/Budovy bez osôb)
@@ -165,7 +200,10 @@ def crop_photos_unet(input_image_path):
     obj_model = YOLO(OBJECT_MODEL_PATH)
 
     img = cv2.imread(input_image_path)
-    if img is None: return
+
+    if img is None:
+        return
+
     h_orig, w_orig = img.shape[:2]
     base_name = os.path.splitext(os.path.basename(input_image_path))[0]
 
@@ -230,4 +268,4 @@ def crop_photos_unet(input_image_path):
 
 
 if __name__ == "__main__":
-    crop_photos_unet("../../photo_dataset/images/test/img_0000234.jpg")
+    crop_photos_unet("../../photo_dataset/images/test/img_0000172.jpg")
