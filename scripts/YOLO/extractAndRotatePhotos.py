@@ -139,24 +139,38 @@ def rotate_photo(cropped, obj_model):
         elif angle == 270:
             temp = cv2.rotate(temp, cv2.ROTATE_90_COUNTERCLOCKWISE)
 
-        res_p = obj_model.predict(source=temp, conf=0.3, classes=CLASS_PERSON, verbose=False)[0]
-        res_o = obj_model.predict(source=temp, conf=0.3, classes=CLASSES_OTHER, verbose=False)[0]
+        res_p = obj_model.predict(source=temp, conf=0.45, classes=CLASS_PERSON, verbose=False)[0]
+        res_o = obj_model.predict(source=temp, conf=0.45, classes=CLASSES_OTHER, verbose=False)[0]
 
-        p_max = res_p.boxes.conf.cpu().numpy().max() if len(res_p.boxes) > 0 else 0.0
-        o_max = res_o.boxes.conf.cpu().numpy().max() if len(res_o.boxes) > 0 else 0.0
+        p_boxes = res_p.boxes.conf.cpu().numpy()
+        p_count = len(p_boxes)
+        p_sum = p_boxes.sum() if p_count > 0 else 0.0
+
+        o_boxes = res_o.boxes.conf.cpu().numpy()
+        o_count = len(o_boxes)
+        o_sum = o_boxes.sum() if o_count > 0 else 0.0
+
         phys = get_physics_score(temp)
 
-        candidates.append({'angle': angle, 'p': p_max, 'o': o_max, 'phys': phys, 'img': temp})
+        candidates.append({
+            'angle': angle,
+            'p_count': p_count,
+            'p_sum': p_sum,
+            'o_count': o_count,
+            'o_sum': o_sum,
+            'phys': phys,
+            'img': temp
+        })
 
     # --- ROZHODOVACIA LOGIKA ---
     # 1. Priorita: Osoby
-    best_p = max(candidates, key=lambda x: x['p'])
-    if best_p['p'] > 0.4:
+    best_p = max(candidates, key=lambda x: (x['p_count'], x['p_sum']))
+    if best_p['p_count'] > 0:
         return best_p['img'], "Osoby", best_p['angle']
 
     # 2. Priorita: Objekty (autá, zvieratá, predmety)
-    best_o = max(candidates, key=lambda x: x['o'])
-    if best_o['o'] > 0.5:
+    best_o = max(candidates, key=lambda x: (x['o_count'], x['o_sum']))
+    if best_o['o_count'] > 0:
         return best_o['img'], "Objekty", best_o['angle']
 
     # 3. Priorita: Fyzika (Krajinky/Budovy bez osôb)
@@ -260,4 +274,4 @@ def crop_photos(input_image_path):
 
 
 if __name__ == "__main__":
-    crop_photos("../../photo_dataset/images/test/img_0000172.jpg")
+    crop_photos("../../photo_dataset/images/test/img_0001759.jpg")
