@@ -1,12 +1,32 @@
-==================================================
-ŠTATISTIKY DATASETU
-==================================================
 
-Celkový počet skenov: 1920
-Celkový počet fotografií: 2636
-Priemerný počet fotografií na sken: 1.37
-Priemerný pomer strán: 1.39
-Fotografie orientované na šírku: 2357
-Fotografie orientované na výšku: 233
-Okrajové prípady: 1081 (41.0%)
-Malé fotografie: 4 (0.2%)
+==================================================
+      ROZŠÍRENÁ ANALÝZA DATASETU PRE DP
+==================================================
+Celkový počet skenov:             2174
+Celkový počet fotiek (anotácií):  2636
+--------------------------------------------------
+Priemerný počet fotiek na sken:   1.21
+Najviac fotiek na jednom skene:   5
+--------------------------------------------------
+DISTRIBÚCIA (počet fotiek : počet skenov):
+  0 fotiek:  255 skenov ( 11.7%)
+  1 fotiek: 1662 skenov ( 76.4%)
+  2 fotiek:   20 skenov (  0.9%)
+  3 fotiek:   15 skenov (  0.7%)
+  4 fotiek:  221 skenov ( 10.2%)
+  5 fotiek:    1 skenov (  0.0%)
+--------------------------------------------------
+GEOMETRIA A ZAKRIVENIE (ROTÁCIA):
+Priemerný uhol natočenia:         0.24°
+Počet výrazne rotovaných (>2°):   21 (0.8%)
+Priemerný aspect ratio:           1.39
+--------------------------------------------------
+ANALÝZA OBSAHU (YOLO KLASIFIKÁCIA & BACKGROUND):
+  Osoby                     : 2222x (84.3% zo všetkých fotiek)
+  Iné / Bez osôb            :  414x (15.7% zo všetkých fotiek)
+  Prázdne skeny (Background):  254x (11.7% zo všetkých skenov)
+--------------------------------------------------
+POTENCIÁLNE VÝZVY PRE MODEL:
+  Fotky pri okraji skenu:         1081 (41.0%)
+  Veľmi malé fotky (<1% skenu):   4 (0.2%)
+==================================================
