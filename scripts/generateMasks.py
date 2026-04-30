@@ -39,7 +39,7 @@ def process_subset(root, subset):
 
 
 if __name__ == "__main__":
-    root = "./photo_dataset"
+    root = "../photo_dataset"
     for s in ["train", "val", "test"]:
         process_subset(root, s)
 

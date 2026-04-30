@@ -274,4 +274,4 @@ def crop_photos(input_image_path):
 
 
 if __name__ == "__main__":
-    crop_photos("../../photo_dataset/images/test/img_0001759.jpg")
+    crop_photos("../../photo_dataset/images/test/img_0000127.jpg")

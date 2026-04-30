@@ -6,11 +6,11 @@ from datetime import datetime
 
 
 class PhotoSegmentationTrainer:
-    def __init__(self, data_yaml='photo_dataset/dataset.yaml'):
+    def __init__(self, data_yaml='../../photo_dataset/dataset.yaml'):
         self.data_yaml = data_yaml
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.model = None
-        self.project_name = 'trained_models'
+        self.project_name = '../../runs/segment/trained_models'
         self.run_name = 'photo_segmentation_model_yolo11s_new'
 
         print("\n" + "=" * 60)
@@ -126,7 +126,7 @@ class PhotoSegmentationTrainer:
 
 def main():
     trainer = PhotoSegmentationTrainer(
-        data_yaml='photo_dataset/dataset.yaml'
+        data_yaml='../../photo_dataset/dataset.yaml'
     )
 
     trainer.train(
