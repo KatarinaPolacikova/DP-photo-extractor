@@ -225,80 +225,112 @@ def analyze_dataset():
         write_and_print("=" * 50)
 
     # VIZUALIZÁCIA
-    fig = plt.figure(figsize=(22, 10))
+        # Plot 1: Histogram počtu fotiek
+        plt.figure(figsize=(8, 6))
+        plt.hist(stats['photos_per_image'], bins=range(max(stats['photos_per_image'] + [0]) + 2),
+                 color='#A3FFFF', edgecolor='black', align='left')
+        plt.title('Distribúcia počtu extrahovaných objektov vo vstupných obrazoch')
+        plt.xlabel('Počet detegovaných objektov (n)')
+        plt.ylabel('Absolútna početnosť (vstupné obrazy)')
+        plt.grid(alpha=0.3)
+        plt.tight_layout()
+        plt.savefig(os.path.join(OUTPUT_DIR_STATS, '01_photos_per_scan.png'), dpi=150)
+        plt.close()
 
-    # Plot 1: Histogram počtu fotiek
-    ax1 = plt.subplot(2, 4, 1)
-    ax1.hist(stats['photos_per_image'], bins=range(max(stats['photos_per_image'] + [0]) + 2), color='#29c5ab',
-             edgecolor='black', align='left')
-    ax1.set_title('Počet fotografií na jeden sken')
-    ax1.set_xlabel('Počet fotiek')
-    ax1.grid(alpha=0.3)
+        # Plot 2: Rozlíšenia skenov
+        plt.figure(figsize=(8, 6))
+        widths = [r[0] for r in stats['image_resolutions']]
+        heights = [r[1] for r in stats['image_resolutions']]
+        plt.scatter(widths, heights, alpha=0.6, color='#D0B3FF', edgecolor='black', linewidth=0.5)
+        plt.title('Priestorové rozlíšenie vstupných obrazových dát')
+        plt.xlabel('Šírka (px)')
+        plt.ylabel('Výška (px)')
+        plt.grid(alpha=0.3)
+        plt.tight_layout()
+        plt.savefig(os.path.join(OUTPUT_DIR_STATS, '02_scan_resolutions.png'), dpi=150)
+        plt.close()
 
-    # Plot 2: Rozlíšenia skenov
-    ax2 = plt.subplot(2, 4, 2)
-    widths = [r[0] for r in stats['image_resolutions']]
-    heights = [r[1] for r in stats['image_resolutions']]
-    ax2.scatter(widths, heights, alpha=0.4, color='purple')
-    ax2.set_title('Rozlíšenie zdrojových skenov')
-    ax2.grid(alpha=0.3)
+        # Plot 3: Aspect ratio distribúcia
+        if stats['aspect_ratios']:
+            plt.figure(figsize=(8, 6))
+            plt.hist(stats['aspect_ratios'], bins=30, color='#FFD1A3', edgecolor='black', alpha=0.9)
+            plt.axvline(1.0, color='#8A2BE2', linestyle='--', linewidth=1.5)
+            plt.title('Distribúcia pomeru strán extrahovaných objektov')
+            plt.xlabel('Pomer strán (šírka/výška)')
+            plt.ylabel('Absolútna početnosť (objekty)')
+            plt.grid(alpha=0.3)
+            plt.tight_layout()
+            plt.savefig(os.path.join(OUTPUT_DIR_STATS, '03_aspect_ratios.png'), dpi=150)
+            plt.close()
 
-    # Plot 3: Aspect ratio distribúcia
-    ax3 = plt.subplot(2, 4, 3)
-    if stats['aspect_ratios']:
-        ax3.hist(stats['aspect_ratios'], bins=30, color='orange', edgecolor='black', alpha=0.7)
-        ax3.axvline(1.0, color='red', linestyle='--')
-    ax3.set_title('Distribúcia aspect ratio')
-    ax3.grid(alpha=0.3)
+        # Plot 4: Orientácia
+        plt.figure(figsize=(8, 6))
+        orient_map = {'portrait': 'Orientácia na výšku', 'landscape': 'Orientácia na šírku', 'square': 'Štvorec'}
+        x_labels = [orient_map.get(k, k) for k in stats['orientation_distribution'].keys()]
 
-    # Plot 4: Orientácia
-    ax4 = plt.subplot(2, 4, 4)
-    ax4.bar(list(stats['orientation_distribution'].keys()), list(stats['orientation_distribution'].values()),
-            color=['#3498db', '#e74c3c', '#95a5a6'], edgecolor='black')
-    ax4.set_title('Orientácia fotografií')
-    ax4.grid(alpha=0.3, axis='y')
+        plt.bar(x_labels, list(stats['orientation_distribution'].values()),
+                color=['#A3C2FF', '#FFB3FF', '#B4FFB4'], edgecolor='black')
+        plt.title('Kategorizácia objektov podľa priestorovej orientácie')
+        plt.ylabel('Absolútna početnosť (objekty)')
+        plt.grid(alpha=0.3, axis='y')
+        plt.tight_layout()
+        plt.savefig(os.path.join(OUTPUT_DIR_STATS, '04_orientation.png'), dpi=150)
+        plt.close()
 
-    # Plot 5: Veľkosť fotiek
-    ax5 = plt.subplot(2, 4, 5)
-    if stats['polygon_areas_normalized']:
-        ax5.hist([a * 100 for a in stats['polygon_areas_normalized']], bins=30, color='green', edgecolor='black',
-                 alpha=0.7)
-    ax5.set_title('Veľkosť fotiek vzhľadom na sken (%)')
-    ax5.grid(alpha=0.3)
+        # Plot 5: Veľkosť fotiek
+        if stats['polygon_areas_normalized']:
+            plt.figure(figsize=(8, 6))
+            plt.hist([a * 100 for a in stats['polygon_areas_normalized']], bins=30,
+                     color='#B4FFB4', edgecolor='black', alpha=0.9)
+            plt.title('Relatívna plošná veľkosť objektov voči vstupnému obrazu')
+            plt.xlabel('Pomer plochy objektu k celkovému obrazu (%)')
+            plt.ylabel('Absolútna početnosť (objekty)')
+            plt.grid(alpha=0.3)
+            plt.tight_layout()
+            plt.savefig(os.path.join(OUTPUT_DIR_STATS, '05_photo_sizes.png'), dpi=150)
+            plt.close()
 
-    # Plot 6: Komplexnosť polygónov
-    ax6 = plt.subplot(2, 4, 6)
-    if stats['polygon_complexities']:
-        ax6.hist(stats['polygon_complexities'],
-                 bins=range(min(stats['polygon_complexities']), max(stats['polygon_complexities']) + 2), color='brown',
-                 edgecolor='black', alpha=0.7)
-    ax6.set_title('Komplexnosť anotácií (počet bodov)')
-    ax6.grid(alpha=0.3)
+        # Plot 6: Komplexnosť polygónov
+        if stats['polygon_complexities']:
+            plt.figure(figsize=(8, 6))
+            plt.hist(stats['polygon_complexities'],
+                     bins=range(min(stats['polygon_complexities']), max(stats['polygon_complexities']) + 2),
+                     color='#FFB3FF', edgecolor='black', align='left', alpha=0.9)
+            plt.title('Geometrická komplexnosť anotačných polygónov')
+            plt.xlabel('Počet vrcholov polygónu (n)')
+            plt.ylabel('Absolútna početnosť (anotácie)')
+            plt.grid(alpha=0.3)
+            plt.tight_layout()
+            plt.savefig(os.path.join(OUTPUT_DIR_STATS, '06_polygon_complexity.png'), dpi=150)
+            plt.close()
 
-    # Plot 7: Uhly rotácie
-    ax7 = plt.subplot(2, 4, 7)
-    if stats['angles']:
-        ax7.hist(stats['angles'], bins=30, color='#e67e22', edgecolor='black', alpha=0.7)
-    ax7.set_title('Distribúcia rotácie (stupne)')
-    ax7.set_xlabel('Uhol odklonu')
-    ax7.grid(alpha=0.3)
+        # Plot 7: Uhly rotácie
+        if stats['angles']:
+            plt.figure(figsize=(8, 6))
+            plt.hist(stats['angles'], bins=30, color='#FFFFB3', edgecolor='black', alpha=0.9)
+            plt.title('Distribúcia uhla natočenia extrahovaných objektov')
+            plt.xlabel('Uhol natočenia (°)')
+            plt.ylabel('Absolútna početnosť (objekty)')
+            plt.grid(alpha=0.3)
+            plt.tight_layout()
+            plt.savefig(os.path.join(OUTPUT_DIR_STATS, '07_rotation_angles.png'), dpi=150)
+            plt.close()
 
-    # Plot 8: Pie chart obsahu
-    ax8 = plt.subplot(2, 4, 8)
-    labels = list(stats['content_tags'].keys())
-    sizes = list(stats['content_tags'].values())
-    if sum(sizes) > 0:
-        ax8.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140,
-                colors=['#9b59b6', '#34495e', '#bdc3c7', '#7f8c8d'])
-    ax8.set_title('Obsah datasetu')
+        # Plot 8: Pie chart obsahu
+        labels = list(stats['content_tags'].keys())
+        sizes = list(stats['content_tags'].values())
+        if sum(sizes) > 0:
+            plt.figure(figsize=(8, 8))
+            pastel_pie_colors = ['#D0B3FF', '#A3C2FF', '#B4FFB4', '#FFB3FF', '#FFD1A3']
+            plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140,
+                    colors=pastel_pie_colors[:len(labels)], wedgeprops={'edgecolor': 'black', 'linewidth': 0.5})
+            plt.title('Kategorizácia sémantického obsahu datasetu')
+            plt.tight_layout()
+            plt.savefig(os.path.join(OUTPUT_DIR_STATS, '08_content_pie_chart.png'), dpi=150)
+            plt.close()
 
-    plt.tight_layout()
-
-    plot_path = os.path.join(OUTPUT_DIR_STATS, 'eda_dataset_analysis.png')
-    plt.savefig(plot_path, dpi=150)
-
-    print(f"\nGRAF uložený ako '{plot_path}'")
-    print(f"Analýza dokončená. Výsledky uložené v priečinku: {OUTPUT_DIR_STATS}")
+        print(f"\nJednotlivé grafy boli uložené do priečinka: {OUTPUT_DIR_STATS}")
+        print("Analýza úspešne dokončená.")
 
 
 if __name__ == "__main__":
