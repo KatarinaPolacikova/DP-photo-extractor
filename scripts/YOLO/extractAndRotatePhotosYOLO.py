@@ -3,8 +3,8 @@ import cv2
 import numpy as np
 from ultralytics import YOLO
 
-MODEL_PATH = "../../runs/segment/trained_models/photo_segmentation_model_yolo11s/weights/best.pt"
-OBJECT_MODEL_PATH = "../../yoloModels/yolov8n.pt"
+MODEL_PATH = "../../trained_model/trained_yolo11_model.pt"
+OBJECT_MODEL_PATH = "../../yolo_models/yolov8n.pt"
 OUTPUT_DIR = "../../extracted_photos"
 CONF_THRESHOLD = 0.25
 
@@ -274,4 +274,4 @@ def crop_photos(input_image_path):
 
 
 if __name__ == "__main__":
-    crop_photos("../../photo_dataset/images/test/img_0000127.jpg")
+    crop_photos("../../photo_dataset/images/test/testsnimka.png")

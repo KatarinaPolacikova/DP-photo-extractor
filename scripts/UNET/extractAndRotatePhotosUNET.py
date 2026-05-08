@@ -6,8 +6,8 @@ import segmentation_models_pytorch as smp
 from ultralytics import YOLO
 
 # --- KONFIGURÁCIA ---
-UNET_MODEL_PATH = "../../runs/unet/final_unet_model.pt"
-OBJECT_MODEL_PATH = "../../yoloModels/yolov8n.pt"
+UNET_MODEL_PATH = "../../trained_model/trained_unet_model.pt"
+OBJECT_MODEL_PATH = "../../yolo_models/yolov8n.pt"
 OUTPUT_DIR = "../../extracted_photos_UNET"
 CONF_THRESHOLD = 0.5  # Prah pre binárnu masku U-Netu
 
@@ -192,7 +192,7 @@ def rotate_photo(cropped, obj_model):
     return best_phys['img'], "Budovy/Krajinky", best_phys['angle']
 
 
-def crop_photos_unet(input_image_path):
+def crop_photos(input_image_path):
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     # Načítanie modelov
@@ -268,5 +268,5 @@ def crop_photos_unet(input_image_path):
 
 
 if __name__ == "__main__":
-    crop_photos_unet("../../photo_dataset/images/test/img_0000120.jpg")
+    crop_photos("../../photo_dataset/images/test/testsnimka.png")
 
