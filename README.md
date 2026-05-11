@@ -56,7 +56,7 @@ from scripts.UNET.extractAndRotatePhotosUNET import crop_photos
 crop_photos("cesta/k/vasmu/obrazku.jpg")
 ```
 ---
-## Algoritmus rotácie a extrakcie
+## Algoritmus rotácie a extrakcie fotografií
 
 Systém vykonáva proces v troch nadväzujúcich krokoch:
 
@@ -86,6 +86,15 @@ Repozitár obsahuje aj pomocné moduly využité vo výskumnej časti práce pre
 - `scripts/YOLO/testYOLO.py` & `scripts/UNET/testUNET.py`: Nástroje na komplexnú evaluáciu úspešnosti modelov pomocou metrík (IoU, F1-score, Dice).
 - `scripts/compareModels.py`: Skript slúžiaci na vzájomné porovnanie kvalitatívnych výsledkov jednotlivých implementovaných modelov.
 
+---
+## Ukážky výsledkov a záznamy experimentov
+
+Repozitár obsahuje predgenerované ukážky a výsledky experimentov popísaných v práci, ktoré demonštrujú úspešnosť algoritmov:
+
+- **`extracted_photos/` & `extracted_photos_UNET/`**: Obsahujú príklady finálne spracovaných fotografií (výstupy programu) vo forme separovaných, narovnaných a správne zorientovaných snímok.
+- **`graphs_and_statistics/`**: Priečinok s výstupmi analýzy datasetu. Obsahuje vizualizácie distribúcie dát a grafické porovnanie úspešnosti jednotlivých modelov.
+- **`runs/`**: Kompletné záznamy z procesov trénovania modelov YOLO a U-Net, vrátane priebežných metrík, strát (loss functions) a vygenerovaných grafov učenia.
+- **`test_results/`**: Detailné výsledky testovania úspešnosti. Nachádza sa tu vyhodnotenie pre jednotlivé testovacie snímky (podpriečinok **`single_image/`**), ako aj súhrnné štatistiky pre celú testovanú množinu dát.
 ---
 
 ## Poznámka
