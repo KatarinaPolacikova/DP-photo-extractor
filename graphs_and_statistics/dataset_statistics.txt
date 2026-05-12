@@ -1,0 +1,32 @@
+
+==================================================
+      ANALÝZA DATASETU
+==================================================
+Celkový počet analyzovaných skenov:             2174
+Celkový počet anotovaných objektov:  2636
+--------------------------------------------------
+Priemerný počet objektov (fotiek) na sken:   1.21
+Maximum objektov na jednom skene:   5
+--------------------------------------------------
+DISTRIBÚCIA (počet fotiek : počet skenov):
+  0 objektov:  255 skenov ( 11.7%)
+  1 objektov: 1662 skenov ( 76.4%)
+  2 objektov:   20 skenov (  0.9%)
+  3 objektov:   15 skenov (  0.7%)
+  4 objektov:  221 skenov ( 10.2%)
+  5 objektov:    1 skenov (  0.0%)
+--------------------------------------------------
+GEOMETRIA A PRIESTOROVÁ DEFORMÁCIA:
+Priemerný uhol natočenia:         0.24°
+Výrazne rotované objekty (>2°):   21 (0.8%)
+Priemerný pomer strán (aspect ratio):           1.39
+--------------------------------------------------
+SÉMANTICKÁ ANALÝZA (Klasifikácia objektov & Pozadie):
+  Osoby                     : 2222x (84.3% zo všetkých fotiek)
+  Iné objekty               :  414x (15.7% zo všetkých fotiek)
+  Prázdne skeny (Pozadie)   :  254x (11.7% zo všetkých skenov)
+--------------------------------------------------
+POTENCIÁLNE VÝZVY PRE MODEL:
+  Objekty blízko okrajov obrazu:         1081 (41.0%)
+  Malé objekty (<1% plochy skenu):   4 (0.2%)
+==================================================
